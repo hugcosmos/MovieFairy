@@ -5,6 +5,7 @@
 ## 在线体验
 
 > 部署在 Cloudflare Pages 上，海报数据在构建时自动获取。
+> [Movie Fairy](https://moviefairy.pages.dev/)
 
 ## 本地运行
 
