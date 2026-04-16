@@ -8,3 +8,5 @@ scripts/venv/
 
 # OS
 .DS_Store
+CLAUDE.md
+visions.md
