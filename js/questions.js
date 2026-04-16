@@ -1,12 +1,12 @@
 /**
  * Movie Fairy - 问题库与情绪探测
  *
- * 情绪模型：通过 3 个问题从不同角度探测用户状态
- * - 问题1：探测能量水平（高/中/低）
- * - 问题2：探测社交倾向（渴望连接 / 想独处 / 无所谓）
- * - 问题3：探测情绪基调（积极 / 中性 / 需要疗愈）
+ * 基于情绪调节理论 (Mood Management Theory, Zillmann):
+ * - 效价 tone: 决定推荐策略——顺势维持好心情 or 互补修正坏心情
+ * - 唤醒度 energy: 决定内容强度——需要刺激 or 需要安抚
+ * - 归属需求 social: 独立修饰，影响人际关系类别的权重
  *
- * 综合三个维度得出情绪画像，用于推荐匹配的电影
+ * tone × energy → 9 种策略，social 不参与策略选择，作为推荐时的独立修饰
  */
 
 // 情绪维度
@@ -128,7 +128,7 @@ function pickQuestions() {
 
 /**
  * 根据用户的 3 个回答，生成情绪画像
- * @param {Array<{dimension: string, value: string}>} answers
+ * @param {Array<string>} answers - [energy, social, tone]
  * @returns {{ energy: string, social: string, tone: string, profile: string }}
  */
 function analyzeMood(answers) {
@@ -138,58 +138,52 @@ function analyzeMood(answers) {
     tone: answers[2],
   };
 
-  // 生成情绪画像标签（用于推荐算法匹配电影类别）
-  mood.profile = getProfile(mood);
-
+  mood.profile = getStrategy(mood);
   return mood;
 }
 
 /**
- * 将三维情绪映射为推荐用的画像标签
+ * 三维 → 策略映射
+ * tone × energy → 9 种推荐策略
+ * social 不参与策略选择，作为推荐时的独立修饰
  */
-function getProfile(mood) {
-  // 核心画像组合：先看 tone，再看 energy
-  if (mood.tone === 'healing') {
-    if (mood.energy === 'low') {
-      return mood.social === 'alone' ? '疲惫独处' : '需要安慰';
-    }
-    return mood.social === 'connect' ? '情绪低但想连接' : '默默疗愈';
+function getStrategy(mood) {
+  const { energy, tone } = mood;
+
+  // 积极：顺势维持好心情
+  if (tone === 'positive') {
+    if (energy === 'high') return '顺势兴奋';
+    if (energy === 'medium') return '顺势享受';
+    return '顺势温柔';
   }
 
-  if (mood.tone === 'positive') {
-    if (mood.energy === 'high') {
-      return mood.social === 'connect' ? '开心想分享' : '自得其乐';
-    }
-    return '平静满足';
+  // 消极：互补修正
+  if (tone === 'healing') {
+    if (energy === 'high') return '情绪出口';
+    if (energy === 'medium') return '温暖治愈';
+    return '轻柔安抚';
   }
 
-  // tone === 'neutral'
-  if (mood.energy === 'low') {
-    return mood.social === 'connect' ? '有点孤独' : '无聊发呆';
-  }
-  if (mood.energy === 'high') {
-    return '好奇探索';
-  }
-  return mood.social === 'alone' ? '想安静思考' : '日常平淡';
+  // 中性：需要被吸引
+  if (energy === 'high') return '探索刺激';
+  if (energy === 'medium') return '随缘发现';
+  return '温和陪伴';
 }
 
 /**
- * 根据情绪画像生成温暖的推荐语
+ * 根据策略生成温暖的推荐语
  */
 function getRecommendationMessage(profile) {
   const messages = {
-    '疲惫独处': '你今天辛苦了。不需要和谁解释，一个人看一部好电影，也是很好的休息。',
-    '需要安慰': '有些累也没关系，这部电影会陪你度过此刻。你不是一个人。',
-    '默默疗愈': '有时候不需要说话，只需要一个故事静静地陪着你。',
-    '情绪低但想连接': '你不需要独自承受。这部电影会给你一些温暖，像有人在你身边。',
-    '开心想分享': '你今天心情不错！这部电影值得这份好心情。',
-    '自得其乐': '享受独处的时光，这部电影会是一个好伙伴。',
-    '平静满足': '心情平静的时候，最适合遇见一部好电影。',
-    '有点孤独': '你不是一个人。让这部电影陪你聊聊那些说不出口的感受。',
-    '无聊发呆': '漫无目的的时候，也许一部好电影能给今天一个方向。',
-    '好奇探索': '你今天充满了好奇心！这部电影会带你走进一个不一样的世界。',
-    '想安静思考': '想安静的时候，一部有深度的电影会让你和自己对话。',
-    '日常平淡': '普通的一天，也许一部好电影能让它变得不那么普通。',
+    '顺势兴奋': '状态正好，这部电影配得上你今天的好心情。',
+    '顺势享受': '心情不错的时候，最适合遇见一部好电影。',
+    '顺势温柔': '好心情不用急，慢慢享受这一刻。',
+    '探索刺激': '你今天充满了好奇心，让这部电影带你走进不一样的世界。',
+    '随缘发现': '没有特别想要什么的时候，反而容易遇见惊喜。',
+    '温和陪伴': '不用想太多，让一部好电影安静地陪你一会儿。',
+    '情绪出口': '有些情绪需要出口，这部电影会给你一个释放的空间。',
+    '温暖治愈': '有些累也没关系，让这部电影陪你度过此刻。',
+    '轻柔安抚': '你今天辛苦了。不需要和谁解释，让一个温暖的故事陪你。',
   };
   return messages[profile] || '给你推荐一部电影，希望它会成为你今天的小确幸。';
 }
