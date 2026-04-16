@@ -121,14 +121,33 @@ function scoreMovies(movies, strategy, social) {
 }
 
 /**
- * 从 Top N 候选中随机选一部
+ * 从 Top N 候选中加权随机选一部
+ *
+ * 分数越高被选中概率越大，但低分候选也有机会。
+ * 使用温度参数控制随机程度：温度越高越随机，越低越趋向最高分。
+ *
  * @param {Array} scored - 已评分的电影列表
- * @param {number} topN - 从前几名中选，默认 5
+ * @param {number} topN - 从前几名中选，默认 8
+ * @param {number} temperature - 温度参数，默认 1.0
  * @returns {Object} 推荐的电影
  */
-function pickRandom(scored, topN = 5) {
+function pickWeighted(scored, topN = 8, temperature = 1.0) {
   const candidates = scored.slice(0, Math.min(topN, scored.length));
-  return candidates[Math.floor(Math.random() * candidates.length)];
+  if (candidates.length === 0) return null;
+
+  // 将分数转为 softmax 概率分布
+  const maxScore = Math.max(...candidates.map(m => m._score));
+  const exps = candidates.map(m => Math.exp((m._score - maxScore) / temperature));
+  const sumExps = exps.reduce((a, b) => a + b, 0);
+
+  // 轮盘赌选择
+  const rand = Math.random() * sumExps;
+  let cumulative = 0;
+  for (let i = 0; i < candidates.length; i++) {
+    cumulative += exps[i];
+    if (rand < cumulative) return candidates[i];
+  }
+  return candidates[candidates.length - 1];
 }
 
 /**
@@ -140,7 +159,7 @@ function pickRandom(scored, topN = 5) {
  */
 function recommend(movies, mood) {
   const scored = scoreMovies(movies, mood.profile, mood.social);
-  const movie = pickRandom(scored);
+  const movie = pickWeighted(scored);
 
   const clean = { ...movie };
   delete clean._score;
@@ -150,5 +169,5 @@ function recommend(movies, mood) {
 
 // 导出
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { scoreMovies, recommend, STRATEGY_PREFERENCES, SOCIAL_MODIFIER, IGNORED_CATEGORIES };
+  module.exports = { scoreMovies, recommend, pickWeighted, STRATEGY_PREFERENCES, SOCIAL_MODIFIER, IGNORED_CATEGORIES };
 }
