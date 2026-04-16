@@ -1,0 +1,10 @@
+# 海报图片（版权归属电影出品方，不纳入仓库）
+data/posters/
+
+# Python
+__pycache__/
+*.pyc
+scripts/venv/
+
+# OS
+.DS_Store
