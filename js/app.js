@@ -7,6 +7,8 @@
   let questions = [];
   let currentStep = -1;
   let answers = [];
+  let candidates = [];
+  let currentMovie = null;
 
   const container = document.getElementById("app");
 
@@ -100,12 +102,24 @@
 
     container.innerHTML = `
       <div class="question-card">
-        <div class="question-header">
-          <div class="progress-bar">${segments}</div>
+        <div class="film-strip">
+          <div class="film-hole"></div><div class="film-hole"></div>
+          <div class="film-hole"></div><div class="film-hole"></div>
+          <div class="film-hole"></div>
+        </div>
+        <div class="stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(212,132,90,0.3)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="rgba(212,132,90,0.2)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(212,132,90,0.25)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="film-strip-bottom">
+          <div class="film-hole"></div><div class="film-hole"></div>
+          <div class="film-hole"></div><div class="film-hole"></div>
+        </div>
+        <div class="question-progress">${segments}</div>
+        <div class="question-center">
           <div class="question-label">${labels[currentStep]}</div>
           <div class="question-text">${q.text}</div>
-        </div>
-        <div class="question-body">
           <div class="options">
             ${q.options
               .map(
@@ -117,15 +131,15 @@
               )
               .join("")}
           </div>
-          <div class="question-footer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d4845a" stroke-width="1.5" opacity="0.5">
-              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
-              <line x1="9" y1="9" x2="9.01" y2="9"/>
-              <line x1="15" y1="9" x2="15.01" y2="9"/>
-            </svg>
-            <span>没有对错，跟着感觉选就好</span>
-          </div>
+        </div>
+        <div class="question-footer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d4845a" stroke-width="1.5" opacity="0.5">
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+            <line x1="9" y1="9" x2="9.01" y2="9"/>
+            <line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+          <span>没有对错，跟着感觉选就好</span>
         </div>
       </div>
     `;
@@ -144,10 +158,16 @@
   }
 
   /** 渲染推荐结果 */
-  function renderResult() {
-    const mood = analyzeMood(answers);
-    const result = recommend(movies, mood);
-    const movie = result.movie;
+  function renderResult(keepAnswers = false) {
+    if (!keepAnswers) {
+      const mood = analyzeMood(answers);
+      const result = recommend(movies, mood);
+      currentMovie = result.movie;
+      candidates = result.candidates;
+    }
+
+    const movie = currentMovie;
+    const mood = keepAnswers ? analyzeMood(answers) : analyzeMood(answers);
     const message = getRecommendationMessage(mood.profile);
 
     const categories = movie.categories.join(" / ");
@@ -171,20 +191,60 @@
           <div class="result-meta">${year} &middot; ${categories}</div>
           ${movie.synopsis ? `<div class="result-synopsis">"${movie.synopsis}"</div>` : ""}
           <div class="result-message">${message}</div>
+          ${(() => {
+              const list = movie.streaming || [];
+              return `<div class="streaming-section">
+                <div class="streaming-title">在哪儿看</div>
+                ${list.length > 0
+                  ? `<div class="streaming-list">
+                      ${list.map(s => `
+                        <a class="streaming-link" href="${s.url || "#"}" target="_blank" rel="noopener">
+                          <span class="streaming-platform">${s.platform}</span>
+                          ${s.type ? `<span class="streaming-type">${s.type}</span>` : ""}
+                        </a>
+                      `).join("")}
+                    </div>`
+                  : `<div class="streaming-empty">暂无在线播放源</div>`
+                }
+              </div>`;
+            })()
+          }
           <div class="result-actions">
-            <a class="douban-link" href="${movie.douban_url}" target="_blank" rel="noopener">
-              在豆瓣查看详情 &rarr;
-            </a>
-            <button class="restart-btn" id="restartBtn">再来一次</button>
+            <button class="change-btn" id="changeBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+              换一部
+            </button>
+            <div class="result-actions-row">
+              <a class="douban-link" href="${movie.douban_url}" target="_blank" rel="noopener">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                在豆瓣查看
+              </a>
+              <button class="restart-btn" id="restartBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                重新测评
+              </button>
+            </div>
           </div>
           <div class="copyright-notice">
-            海报与评分数据来源于豆瓣，版权归各自所有者
+            海报、评分等数据来源于豆瓣，版权归各自所有者
           </div>
         </div>
       </div>
     `;
 
-    document.getElementById("restartBtn").addEventListener("click", renderWelcome);
+    document.getElementById("changeBtn").addEventListener("click", () => {
+      const newMovie = pickFromCandidates(candidates, currentMovie);
+      if (newMovie) {
+        currentMovie = newMovie;
+        renderResult(true);
+      }
+    });
+
+    document.getElementById("restartBtn").addEventListener("click", () => {
+      answers = [];
+      currentStep = 0;
+      renderQuestion();
+    });
   }
 
   init();

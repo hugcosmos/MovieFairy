@@ -12,7 +12,34 @@ const MOVIES = [
     ],
     "year": 1994,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1292052/"
+    "douban_url": "https://movie.douban.com/subject/1292052/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D655241515%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F1o29ui77e85grdr.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rra0h3wg.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_4ce42e368c2e11e0a046.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss28274%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 2,
@@ -27,7 +54,24 @@ const MOVIES = [
     ],
     "year": 1993,
     "countries": "中国大陆 中国香港",
-    "douban_url": "https://movie.douban.com/subject/1291546/"
+    "douban_url": "https://movie.douban.com/subject/1291546/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fj3czmhisqin799r.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss33133%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrho3150.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 3,
@@ -42,7 +86,29 @@ const MOVIES = [
     ],
     "year": 1997,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1292722/"
+    "douban_url": "https://movie.douban.com/subject/1292722/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D673039591%26pwId%3DPRO_f89c2154a36f43a2a911da46986a7091%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Ft5jqhgw8pix81mw.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrny4w8w.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46244%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 4,
@@ -56,22 +122,34 @@ const MOVIES = [
     ],
     "year": 1994,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1292720/"
-  },
-  {
-    "id": 5,
-    "title": "千与千寻",
-    "poster_url": "data/posters/005.jpg",
-    "synopsis": "最好的宫崎骏，最好的久石让。",
-    "rating": 9.4,
-    "categories": [
-      "剧情",
-      "动画",
-      "奇幻"
-    ],
-    "year": 2001,
-    "countries": "日本",
-    "douban_url": "https://movie.douban.com/subject/1291561/"
+    "douban_url": "https://movie.douban.com/subject/1292720/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D714205994%26pwId%3DPRO_6657a42d810a4595b9a346da8b73f809%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fr6hc2kqgvnmiejn.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss25568%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrk3u264.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc011e2e962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 6,
@@ -87,7 +165,29 @@ const MOVIES = [
     ],
     "year": 1997,
     "countries": "意大利",
-    "douban_url": "https://movie.douban.com/subject/1292063/"
+    "douban_url": "https://movie.douban.com/subject/1292063/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F1weku8f23n0j12s.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss43670%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjqfdbc.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc0249c0962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 7,
@@ -102,7 +202,34 @@ const MOVIES = [
     ],
     "year": 2014,
     "countries": "美国 英国 加拿大",
-    "douban_url": "https://movie.douban.com/subject/1889243/"
+    "douban_url": "https://movie.douban.com/subject/1889243/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D621951749%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fc2seabnsfozypl8.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rr7qhp7c.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc0b6e2e962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss28585%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 8,
@@ -117,7 +244,29 @@ const MOVIES = [
     ],
     "year": 1994,
     "countries": "法国 美国",
-    "douban_url": "https://movie.douban.com/subject/1295644/"
+    "douban_url": "https://movie.douban.com/subject/1295644/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Ffvue88y1fsnk4w2.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrho32zk.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cbfacf7e962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss10945%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 9,
@@ -133,7 +282,34 @@ const MOVIES = [
     ],
     "year": 2010,
     "countries": "美国 英国",
-    "douban_url": "https://movie.douban.com/subject/3541415/"
+    "douban_url": "https://movie.douban.com/subject/3541415/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D651228795%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fh0meep6p766jgqh.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss28586%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fwww.iqiyi.com%2Fv_19rra64i9c.html&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc146dee962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 10,
@@ -147,7 +323,34 @@ const MOVIES = [
     ],
     "year": 1998,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1292064/"
+    "douban_url": "https://movie.douban.com/subject/1292064/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F31082i4u5ovkrl0.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D714209619%26pwId%3DPRO_ede5eeeab68340cd9b45af18387e134f%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrk3u9wg.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fwww.bilibili.com%2Fbangumi%2Fplay%2Fss25812%3Fbsource%3Ddouban&subtype=8&type=online-video&link2key=c6354eabcf"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc00e026962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 11,
@@ -162,20 +365,34 @@ const MOVIES = [
     ],
     "year": 1993,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1295124/"
-  },
-  {
-    "id": 12,
-    "title": "忠犬八公的故事",
-    "poster_url": "data/posters/012.jpg",
-    "synopsis": "永远都不能忘记你所爱的人。",
-    "rating": 9.4,
-    "categories": [
-      "剧情"
-    ],
-    "year": 2009,
-    "countries": "美国 英国",
-    "douban_url": "https://movie.douban.com/subject/3011091/"
+    "douban_url": "https://movie.douban.com/subject/1295124/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fdr37tbvercpqsko.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D615978408%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrhx0z4o.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc04fddc962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss45032%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 13,
@@ -189,7 +406,19 @@ const MOVIES = [
     ],
     "year": 1998,
     "countries": "意大利",
-    "douban_url": "https://movie.douban.com/subject/1292001/"
+    "douban_url": "https://movie.douban.com/subject/1292001/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fzv5gmkkty7l0xl2.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fwww.iqiyi.com%2Fv_19rr7r4y2o.html&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 14,
@@ -204,23 +433,34 @@ const MOVIES = [
     ],
     "year": 2016,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/25662329/"
-  },
-  {
-    "id": 15,
-    "title": "三傻大闹宝莱坞",
-    "poster_url": "data/posters/015.jpg",
-    "synopsis": "英俊版憨豆，高情商版谢耳朵。",
-    "rating": 9.2,
-    "categories": [
-      "剧情",
-      "喜剧",
-      "爱情",
-      "歌舞"
-    ],
-    "year": 2009,
-    "countries": "印度",
-    "douban_url": "https://movie.douban.com/subject/3793023/"
+    "douban_url": "https://movie.douban.com/subject/25662329/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Ffhe2h7sop52qzza.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D623337029%26pwId%3DPRO_3ad82568745e4ad6b68147632a313535%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "单片付费",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46054%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_44adcf3e198211e5b522.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrlpltbg.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 16,
@@ -235,7 +475,34 @@ const MOVIES = [
     ],
     "year": 2008,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/2131459/"
+    "douban_url": "https://movie.douban.com/subject/2131459/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D721496957%26pwId%3DPRO_c76984e10df74d6fac503298185e970d%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fvqeduf4egjyrc8w.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "单片付费",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46263%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc0d64f4962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjpwu8w.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 17,
@@ -249,7 +516,24 @@ const MOVIES = [
     ],
     "year": 2004,
     "countries": "法国 瑞士 德国",
-    "douban_url": "https://movie.douban.com/subject/1291549/"
+    "douban_url": "https://movie.douban.com/subject/1291549/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F3u551qgyjhil9l7%2Fw0046yrp3ny.html&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc029268962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrj5w9vs.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 18,
@@ -264,7 +548,29 @@ const MOVIES = [
     ],
     "year": 2002,
     "countries": "中国香港",
-    "douban_url": "https://movie.douban.com/subject/1307914/"
+    "douban_url": "https://movie.douban.com/subject/1307914/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D622793074%26pwId%3Dd01197d3076b4164af82983c408bb996&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fsg5p4qp1s6jbyj8.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_c9baeb20c2e411df97c0.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjefg34.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 19,
@@ -280,7 +586,19 @@ const MOVIES = [
     ],
     "year": 1957,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1296141/"
+    "douban_url": "https://movie.douban.com/subject/1296141/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D736746541%26pwId%3DPRO_bf307d8e09094122bdb37c0cd69a60cc%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_12e5f3e0ea1711df97c0.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 20,
@@ -296,7 +614,34 @@ const MOVIES = [
     ],
     "year": 2017,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/20495023/"
+    "douban_url": "https://movie.douban.com/subject/20495023/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D655254365%26pwId%3DPRO_00b840f316c84f81be721e2cf925f1a6%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fvjrvzv3s517g6m8.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rr8cycvc.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_25efbfbdefbfbd17efbf.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "单片付费",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46063%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 21,
@@ -312,20 +657,29 @@ const MOVIES = [
     ],
     "year": 1995,
     "countries": "中国香港 中国大陆",
-    "douban_url": "https://movie.douban.com/subject/1292213/"
-  },
-  {
-    "id": 22,
-    "title": "熔炉",
-    "poster_url": "data/posters/022.jpg",
-    "synopsis": "我们一路奋战不是为了改变世界，而是为了不让世界改变我们。",
-    "rating": 9.3,
-    "categories": [
-      "剧情"
-    ],
-    "year": 2011,
-    "countries": "韩国",
-    "douban_url": "https://movie.douban.com/subject/5912992/"
+    "douban_url": "https://movie.douban.com/subject/1292213/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Ffse52rd4klx7qn2.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss79798%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc037a70962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrkqj66k.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 23,
@@ -339,7 +693,34 @@ const MOVIES = [
     ],
     "year": 2011,
     "countries": "法国",
-    "douban_url": "https://movie.douban.com/subject/6786002/"
+    "douban_url": "https://movie.douban.com/subject/6786002/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D683944992%26pwId%3Dd01197d3076b4164af82983c408bb996&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fkm0frs6ajyrstog.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss39557%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XMzc2ODMxNTMy.html%3Ftpa%3DdW5pb25faWQ9MzAwMDA4XzEwMDAwMl8wMl8wMQ%26refer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrhoa6kc.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 24,
@@ -353,7 +734,34 @@ const MOVIES = [
     ],
     "year": 1972,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1291841/"
+    "douban_url": "https://movie.douban.com/subject/1291841/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fx90v161tdg3lrzl.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D714206349%26pwId%3DPRO_37d62c2d9a5d41d4a6a66165bf56a9dc%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss26416%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrg3726w.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_f08b23b8aaa311df97c0.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 25,
@@ -368,7 +776,14 @@ const MOVIES = [
     ],
     "year": 1987,
     "countries": "英国 意大利 中国大陆 法国",
-    "douban_url": "https://movie.douban.com/subject/1293172/"
+    "douban_url": "https://movie.douban.com/subject/1293172/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F29trop8s2ipr3es.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      }
+    ]
   },
   {
     "id": 26,
@@ -382,7 +797,34 @@ const MOVIES = [
     ],
     "year": 2001,
     "countries": "美国 英国",
-    "douban_url": "https://movie.douban.com/subject/1295038/"
+    "douban_url": "https://movie.douban.com/subject/1295038/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fpb69zpzabgg1t7n.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D711737195%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjbdi0s.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XMjg5MTk4NDI0.html%3Ftpa%3DdW5pb25faWQ9MzAwMDA4XzEwMDAwMl8wMl8wMQ%26refer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss28281%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 27,
@@ -397,37 +839,29 @@ const MOVIES = [
     ],
     "year": 2006,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1849031/"
-  },
-  {
-    "id": 28,
-    "title": "龙猫",
-    "poster_url": "data/posters/028.jpg",
-    "synopsis": "人人心中都有个龙猫，童年就永远不会消失。",
-    "rating": 9.2,
-    "categories": [
-      "动画",
-      "奇幻",
-      "冒险"
-    ],
-    "year": 1988,
-    "countries": "日本",
-    "douban_url": "https://movie.douban.com/subject/1291560/"
-  },
-  {
-    "id": 29,
-    "title": "活着",
-    "poster_url": "data/posters/029.jpg",
-    "synopsis": "张艺谋最好的电影。",
-    "rating": 9.3,
-    "categories": [
-      "剧情",
-      "历史",
-      "家庭"
-    ],
-    "year": 1994,
-    "countries": "中国大陆 中国香港",
-    "douban_url": "https://movie.douban.com/subject/1292365/"
+    "douban_url": "https://movie.douban.com/subject/1849031/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fvbr7hkoebjpsrxb.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc0f0dfe962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "单片付费",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss38511%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrk3nlys.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 30,
@@ -442,7 +876,34 @@ const MOVIES = [
     ],
     "year": 2010,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/3319755/"
+    "douban_url": "https://movie.douban.com/subject/3319755/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F997m2fipgc6erv7.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D651233303%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss28980%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_4f717e188dc511e0a046.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rra10k7w.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 31,
@@ -459,7 +920,34 @@ const MOVIES = [
     ],
     "year": 2008,
     "countries": "美国 英国",
-    "douban_url": "https://movie.douban.com/subject/1851857/"
+    "douban_url": "https://movie.douban.com/subject/1851857/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D651597690%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fw7vmjen1fzoeygx.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss28280%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rra6zong.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_e260d9008cc411e0a046.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 32,
@@ -475,7 +963,34 @@ const MOVIES = [
     ],
     "year": 2003,
     "countries": "美国 新西兰",
-    "douban_url": "https://movie.douban.com/subject/1291552/"
+    "douban_url": "https://movie.douban.com/subject/1291552/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D608608809%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Ftphyx6noqtfv27x.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss33035%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rra68crs.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_f01148328c3811e0a046.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 33,
@@ -489,7 +1004,24 @@ const MOVIES = [
     ],
     "year": 2018,
     "countries": "中国大陆",
-    "douban_url": "https://movie.douban.com/subject/26752088/"
+    "douban_url": "https://movie.douban.com/subject/26752088/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fog0eputlxwet1cn.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rreozmq8.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_c6c62a475a5d4a14ab48.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 34,
@@ -505,7 +1037,29 @@ const MOVIES = [
     ],
     "year": 1939,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1300267/"
+    "douban_url": "https://movie.douban.com/subject/1300267/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fgzdq4acw02m3ajs.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss31886%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_3b17670a8c2311e0a046.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjba8ec.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 35,
@@ -521,7 +1075,34 @@ const MOVIES = [
     ],
     "year": 2009,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/2129039/"
+    "douban_url": "https://movie.douban.com/subject/2129039/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fw9gk2xdkyvez6yp.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D701021046%26pwId%3DPRO_b75252bcd9024e938934af2a5b193b68%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc12950a962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "单片付费",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46230%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjpyvco.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 36,
@@ -537,7 +1118,14 @@ const MOVIES = [
     ],
     "year": 2010,
     "countries": "中国大陆 中国香港",
-    "douban_url": "https://movie.douban.com/subject/3742360/"
+    "douban_url": "https://movie.douban.com/subject/3742360/",
+    "streaming": [
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss12548%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 37,
@@ -553,7 +1141,29 @@ const MOVIES = [
     ],
     "year": 2004,
     "countries": "日本",
-    "douban_url": "https://movie.douban.com/subject/1308807/"
+    "douban_url": "https://movie.douban.com/subject/1308807/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fc2h3m70s4q41ank.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_cm1o1ppfig.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss48590%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_35ccc48082b211e196ac.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 38,
@@ -566,7 +1176,29 @@ const MOVIES = [
     ],
     "year": 1957,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1293182/"
+    "douban_url": "https://movie.douban.com/subject/1293182/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D736743259%26pwId%3DPRO_ed83870a72d347288d24e9c69ecd9a50%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss34055%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rr7rgwgs.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc020b4a962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 39,
@@ -581,20 +1213,29 @@ const MOVIES = [
     ],
     "year": 2015,
     "countries": "德国 瑞士",
-    "douban_url": "https://movie.douban.com/subject/25958717/"
-  },
-  {
-    "id": 40,
-    "title": "素媛",
-    "poster_url": "data/posters/040.jpg",
-    "synopsis": "受过伤害的人总是笑得最开心，因为他们不愿意让身边的人承受一样的痛苦。",
-    "rating": 9.3,
-    "categories": [
-      "剧情"
-    ],
-    "year": 2013,
-    "countries": "韩国",
-    "douban_url": "https://movie.douban.com/subject/21937452/"
+    "douban_url": "https://movie.douban.com/subject/25958717/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D624310278%26pwId%3DPRO_897a5ab1b9cb484a85d508a407f70674%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fy2rxtkwgsvbkdw9.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss26976%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XMzI0MTQzMTg0OA%3D%3D.html%3Ftpa%3DdW5pb25faWQ9MzAwMDA4XzEwMDAwMl8wMl8wMQ%26refer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 41,
@@ -609,7 +1250,34 @@ const MOVIES = [
     ],
     "year": 2002,
     "countries": "美国 加拿大",
-    "douban_url": "https://movie.douban.com/subject/1305487/"
+    "douban_url": "https://movie.douban.com/subject/1305487/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fwtwpu1rqpe427mw.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D714470077%26pwId%3DPRO_932b2865908346e1b09ba61b4aa3cb61%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrmxplc8.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc0377c8962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss25844%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 42,
@@ -624,21 +1292,19 @@ const MOVIES = [
     ],
     "year": 1986,
     "countries": "日本",
-    "douban_url": "https://movie.douban.com/subject/1291583/"
-  },
-  {
-    "id": 43,
-    "title": "鬼子来了",
-    "poster_url": "data/posters/043.jpg",
-    "synopsis": "对敌人的仁慈，就是对自己残忍。",
-    "rating": 9.3,
-    "categories": [
-      "剧情",
-      "喜剧"
-    ],
-    "year": 2000,
-    "countries": "中国大陆",
-    "douban_url": "https://movie.douban.com/subject/1291858/"
+    "douban_url": "https://movie.douban.com/subject/1291583/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fbzg57zo8fatq3mb.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_455fd3be3dc611e1b318.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 44,
@@ -654,7 +1320,24 @@ const MOVIES = [
     ],
     "year": 2016,
     "countries": "印度",
-    "douban_url": "https://movie.douban.com/subject/26387939/"
+    "douban_url": "https://movie.douban.com/subject/26387939/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F2xxul4n2j8y0rxi.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss12243%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rr7sz5b8.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 45,
@@ -669,7 +1352,34 @@ const MOVIES = [
     ],
     "year": 2012,
     "countries": "美国 中国台湾 英国 加拿大",
-    "douban_url": "https://movie.douban.com/subject/1929463/"
+    "douban_url": "https://movie.douban.com/subject/1929463/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D721547514%26pwId%3DPRO_71842fe4c5fb4b34bd65c3e6ab831be5%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fphncvm1ns0sygig.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjv4kz0.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_0eecd0e69f6811df97c0.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "单片付费",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46074%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 46,
@@ -685,7 +1395,34 @@ const MOVIES = [
     ],
     "year": 2002,
     "countries": "英国 法国 波兰 德国 美国",
-    "douban_url": "https://movie.douban.com/subject/1296736/"
+    "douban_url": "https://movie.douban.com/subject/1296736/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fg6n8noz3gmbiz4o.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D635995587%26pwId%3DPRO_80eb81b4cd2d4d1d8372d0624bcf8472%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss26973%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrho71bg.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc00fa5c962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 47,
@@ -701,7 +1438,34 @@ const MOVIES = [
     ],
     "year": 2002,
     "countries": "美国 新西兰",
-    "douban_url": "https://movie.douban.com/subject/1291572/"
+    "douban_url": "https://movie.douban.com/subject/1291572/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D667962728%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fe2rt42iw6cv1ndq.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rra68cjk.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_bf8cca2a8c3711e0a046.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss33034%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 48,
@@ -714,7 +1478,24 @@ const MOVIES = [
     ],
     "year": 1989,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1291548/"
+    "douban_url": "https://movie.douban.com/subject/1291548/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fvpbpk93xbkkwa8q.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjblpq8.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc03b12a962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 49,
@@ -730,7 +1511,24 @@ const MOVIES = [
     ],
     "year": 1995,
     "countries": "中国香港 中国大陆",
-    "douban_url": "https://movie.douban.com/subject/1299398/"
+    "douban_url": "https://movie.douban.com/subject/1299398/",
+    "streaming": [
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjzdves.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc036ab2962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss79799%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 50,
@@ -746,7 +1544,29 @@ const MOVIES = [
     ],
     "year": 2018,
     "countries": "美国 中国大陆",
-    "douban_url": "https://movie.douban.com/subject/27060077/"
+    "douban_url": "https://movie.douban.com/subject/27060077/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fr9umzdo0yjelfg1.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_19e780477998442f84d4.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss33615%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rr5eoxww.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 51,
@@ -759,7 +1579,29 @@ const MOVIES = [
     ],
     "year": 2018,
     "countries": "黎巴嫩 美国 法国 塞浦路斯 卡塔尔 英国",
-    "douban_url": "https://movie.douban.com/subject/30170448/"
+    "douban_url": "https://movie.douban.com/subject/30170448/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Feaa7qkjmlecfnp1.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rsfrzkj8.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_22e47cb505b149e5afec.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss33471%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 52,
@@ -772,7 +1614,34 @@ const MOVIES = [
     ],
     "year": 1992,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1298624/"
+    "douban_url": "https://movie.douban.com/subject/1298624/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fxv0kqtauy4972gp.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D656781956%26pwId%3Dd01197d3076b4164af82983c408bb996&subtype=15&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrhwtpa4.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc038ac4962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss44971%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 53,
@@ -785,21 +1654,29 @@ const MOVIES = [
     ],
     "year": 1961,
     "countries": "1964(中国大陆)",
-    "douban_url": "https://movie.douban.com/subject/1418019/"
-  },
-  {
-    "id": 54,
-    "title": "黑客帝国",
-    "poster_url": "data/posters/054.jpg",
-    "synopsis": "",
-    "rating": 9.1,
-    "categories": [
-      "动作",
-      "科幻"
-    ],
-    "year": 1999,
-    "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1291843/"
+    "douban_url": "https://movie.douban.com/subject/1418019/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fmzc00200pkpyg2p.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "javascript: void 0;"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss33220%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrkq3mxk.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 55,
@@ -815,7 +1692,34 @@ const MOVIES = [
     ],
     "year": 2001,
     "countries": "新西兰 美国 英国",
-    "douban_url": "https://movie.douban.com/subject/1291571/"
+    "douban_url": "https://movie.douban.com/subject/1291571/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D651229306%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F5jnb4fae4hzic9g.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_bb08e8728c3611e0a046.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss33033%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rra68glc.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 56,
@@ -830,7 +1734,34 @@ const MOVIES = [
     ],
     "year": 1953,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1293839/"
+    "douban_url": "https://movie.douban.com/subject/1293839/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D769737616%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F4nxabytt44ngpry.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss27504%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrk3rbyg.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_9e0fe97cbc7211de97c0.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 57,
@@ -844,7 +1775,34 @@ const MOVIES = [
     ],
     "year": 1974,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1299131/"
+    "douban_url": "https://movie.douban.com/subject/1299131/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fc2f26xjegzuyi16.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D714218748%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrg3joh0.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc0181ca962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss26427%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 58,
@@ -859,7 +1817,29 @@ const MOVIES = [
     ],
     "year": 1994,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1301753/"
+    "douban_url": "https://movie.douban.com/subject/1301753/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Flh4cj69w87hfodz.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rr57r5jk.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46258%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XMTQxOTgyMjEyOA%3D%3D.html%3Ftpa%3DdW5pb25faWQ9MzAwMDA4XzEwMDAwMl8wMl8wMQ%26refer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 59,
@@ -873,34 +1853,19 @@ const MOVIES = [
     ],
     "year": 1988,
     "countries": "意大利 法国",
-    "douban_url": "https://movie.douban.com/subject/1291828/"
-  },
-  {
-    "id": 60,
-    "title": "饮食男女",
-    "poster_url": "data/posters/060.jpg",
-    "synopsis": "",
-    "rating": 9.2,
-    "categories": [
-      "剧情",
-      "家庭"
-    ],
-    "year": 1994,
-    "countries": "中国台湾 美国",
-    "douban_url": "https://movie.douban.com/subject/1291818/"
-  },
-  {
-    "id": 61,
-    "title": "辩护人",
-    "poster_url": "data/posters/061.jpg",
-    "synopsis": "电影的现实意义大过电影本身。",
-    "rating": 9.2,
-    "categories": [
-      "剧情"
-    ],
-    "year": 2013,
-    "countries": "韩国",
-    "douban_url": "https://movie.douban.com/subject/21937445/"
+    "douban_url": "https://movie.douban.com/subject/1291828/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fcj48e9olxbbjiq7.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrho6qm0.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 62,
@@ -915,7 +1880,34 @@ const MOVIES = [
     ],
     "year": 2008,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1485260/"
+    "douban_url": "https://movie.douban.com/subject/1485260/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F5y07fkhxzj48wcj.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D651229304%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss32351%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rra6pojw.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_7acf02e08dae11e0a046.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 63,
@@ -931,7 +1923,14 @@ const MOVIES = [
     ],
     "year": 1999,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1292000/"
+    "douban_url": "https://movie.douban.com/subject/1292000/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fkgl9qa6vo5vpie5.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      }
+    ]
   },
   {
     "id": 64,
@@ -945,7 +1944,34 @@ const MOVIES = [
     ],
     "year": 2001,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1306029/"
+    "douban_url": "https://movie.douban.com/subject/1306029/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fle1y6ytqnnd2ua2.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D631198773%26pwId%3DPRO_9a469f9653904aea8c872de78e20ee8a%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc009de6962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss26175%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrnppl5w.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 65,
@@ -959,7 +1985,29 @@ const MOVIES = [
     ],
     "year": 2008,
     "countries": "英国 美国",
-    "douban_url": "https://movie.douban.com/subject/3008247/"
+    "douban_url": "https://movie.douban.com/subject/3008247/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fk2zh09k7oid23o0.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc12ec58962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss42307%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjqdjlw.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 66,
@@ -973,7 +2021,34 @@ const MOVIES = [
     ],
     "year": 2011,
     "countries": "美国 英国",
-    "douban_url": "https://movie.douban.com/subject/3011235/"
+    "douban_url": "https://movie.douban.com/subject/3011235/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D711737256%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Feshodxofa7omesm.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss28302%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rr9gh53c.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_7132f3380d4c11df97c0.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 67,
@@ -987,7 +2062,29 @@ const MOVIES = [
     ],
     "year": 1995,
     "countries": "日本",
-    "douban_url": "https://movie.douban.com/subject/1292220/"
+    "douban_url": "https://movie.douban.com/subject/1292220/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F8r1352nt8g4mgy1.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss39429%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrho324c.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XNTE5ODM2MDg2NA%3D%3D.html%3Ftpa%3DdW5pb25faWQ9MzAwMDA4XzEwMDAwMl8wMl8wMQ%26refer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 68,
@@ -1002,7 +2099,29 @@ const MOVIES = [
     ],
     "year": 1998,
     "countries": "英国",
-    "douban_url": "https://movie.douban.com/subject/1293350/"
+    "douban_url": "https://movie.douban.com/subject/1293350/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fmzc00200xijig1f.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46023%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc050b06962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrk3zxd4.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 69,
@@ -1016,7 +2135,29 @@ const MOVIES = [
     ],
     "year": 2006,
     "countries": "德国",
-    "douban_url": "https://movie.douban.com/subject/1900841/"
+    "douban_url": "https://movie.douban.com/subject/1900841/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fih84bi86nzujfs5.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss10081%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XMjUzNTEzMjc4MA%3D%3D.html%3Fspm%3Da2h0c.8166622.PhoneSokuProgram_1.3%26s%3Dcc0c03c0962411de83b1&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrnaubew.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 70,
@@ -1032,7 +2173,34 @@ const MOVIES = [
     ],
     "year": 1965,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1294408/"
+    "douban_url": "https://movie.douban.com/subject/1294408/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fnlzswcxr4umy1fr.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D736016863%26pwId%3DPRO_453ce2247e6845a7b6c0731d6311dec4%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjxerwg.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc01cefa962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fwww.bilibili.com%2Fbangumi%2Fplay%2Fss28658%3Fbsource%3Ddouban&subtype=8&type=online-video&link2key=c6354eabcf"
+      }
+    ]
   },
   {
     "id": 71,
@@ -1048,7 +2216,29 @@ const MOVIES = [
     ],
     "year": 2004,
     "countries": "中国大陆 中国香港",
-    "douban_url": "https://movie.douban.com/subject/1291543/"
+    "douban_url": "https://movie.douban.com/subject/1291543/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fuiq0rxuywu508qr.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrk40ajc.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc04434c962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss32523%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 72,
@@ -1062,7 +2252,34 @@ const MOVIES = [
     ],
     "year": 2004,
     "countries": "英国 美国",
-    "douban_url": "https://movie.douban.com/subject/1291544/"
+    "douban_url": "https://movie.douban.com/subject/1291544/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D711731525%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F3k0pikhlunqinuv.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_65108f308c3911e0a046.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss28297%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjbevto.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 73,
@@ -1077,7 +2294,24 @@ const MOVIES = [
     ],
     "year": 2000,
     "countries": "意大利 美国",
-    "douban_url": "https://movie.douban.com/subject/1292402/"
+    "douban_url": "https://movie.douban.com/subject/1292402/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fu63dvwocddpi7ei.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46015%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrh1gubo.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 74,
@@ -1092,7 +2326,29 @@ const MOVIES = [
     ],
     "year": 2009,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1652587/"
+    "douban_url": "https://movie.douban.com/subject/1652587/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fldl1811bamppdrd.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D712481283%26pwId%3DPRO_c62d9667eecc449db32fb0e1f75830d9%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "单片付费",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46068%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_b12db09cd57d11de97c0.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 75,
@@ -1108,7 +2364,14 @@ const MOVIES = [
     ],
     "year": 2016,
     "countries": "西班牙",
-    "douban_url": "https://movie.douban.com/subject/26580232/"
+    "douban_url": "https://movie.douban.com/subject/26580232/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F8lvnb7aiio1crpd.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      }
+    ]
   },
   {
     "id": 76,
@@ -1122,7 +2385,34 @@ const MOVIES = [
     ],
     "year": 1998,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1292849/"
+    "douban_url": "https://movie.douban.com/subject/1292849/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D714218823%26pwId%3DPRO_c4a35ac6dd0d4bc09ead5da749805980%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F8lv03zh9yuhm1a2.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss26727%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc016d7a962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrnpp9co.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 77,
@@ -1137,7 +2427,19 @@ const MOVIES = [
     ],
     "year": 1991,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1293544/"
+    "douban_url": "https://movie.douban.com/subject/1293544/",
+    "streaming": [
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rr4ad9lw.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fwww.bilibili.com%2Fbangumi%2Fplay%2Fss33897%3Fbsource%3Ddouban&subtype=8&type=online-video&link2key=c6354eabcf"
+      }
+    ]
   },
   {
     "id": 78,
@@ -1152,7 +2454,29 @@ const MOVIES = [
     ],
     "year": 1997,
     "countries": "伊朗",
-    "douban_url": "https://movie.douban.com/subject/1303021/"
+    "douban_url": "https://movie.douban.com/subject/1303021/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fab66o4bl2p67wv7.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss43671%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc04e3a6962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjraeeo.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 79,
@@ -1167,7 +2491,34 @@ const MOVIES = [
     ],
     "year": 2014,
     "countries": "美国 德国 英国",
-    "douban_url": "https://movie.douban.com/subject/11525673/"
+    "douban_url": "https://movie.douban.com/subject/11525673/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Ftlvwiitova3d9m1.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D762625704%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrhxz45s.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "单片付费",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46076%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_b0c4e1483a0011e38b3f.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 80,
@@ -1183,20 +2534,29 @@ const MOVIES = [
     ],
     "year": 2004,
     "countries": "美国 加拿大",
-    "douban_url": "https://movie.douban.com/subject/1292343/"
-  },
-  {
-    "id": 81,
-    "title": "飞越疯人院",
-    "poster_url": "data/posters/081.jpg",
-    "synopsis": "",
-    "rating": 9.1,
-    "categories": [
-      "剧情"
-    ],
-    "year": 1975,
-    "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1292224/"
+    "douban_url": "https://movie.douban.com/subject/1292343/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fporrg8osobrmvs8.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss34368%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rwfpb9z0.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc01150a962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 82,
@@ -1211,7 +2571,29 @@ const MOVIES = [
     ],
     "year": 2023,
     "countries": "意大利",
-    "douban_url": "https://movie.douban.com/subject/36445098/"
+    "douban_url": "https://movie.douban.com/subject/36445098/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D957778162%26pwId%3DPRO_c80624fdd1f04d259cb84fddf8c00dba%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fmzc00200h2juvtf.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss89626%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_daae47ec7d11446594e8.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 83,
@@ -1226,7 +2608,34 @@ const MOVIES = [
     ],
     "year": 2010,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/2334904/"
+    "douban_url": "https://movie.douban.com/subject/2334904/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fv6nwjtseqb43ots.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D714211021%26pwId%3DPRO_3521b04e5b764159ad8e49c1f1c30e6a%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrk3nll8.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_fd9a8300cb6011de97c0.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss26728%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 84,
@@ -1239,7 +2648,29 @@ const MOVIES = [
     ],
     "year": 1997,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1292656/"
+    "douban_url": "https://movie.douban.com/subject/1292656/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fmhl665xf8ina3t2.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc017bf8962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss42709%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjr24g4.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 85,
@@ -1254,7 +2685,34 @@ const MOVIES = [
     ],
     "year": 2006,
     "countries": "英国 美国",
-    "douban_url": "https://movie.douban.com/subject/1780330/"
+    "douban_url": "https://movie.douban.com/subject/1780330/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D651233359%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fyjko7f1b1muwdhe.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_9eb325388cbe11e0a046.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rra04xok.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss33130%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 86,
@@ -1269,7 +2727,24 @@ const MOVIES = [
     ],
     "year": 1994,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1291832/"
+    "douban_url": "https://movie.douban.com/subject/1291832/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Feinghaeb1shgwf2.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjrbafs.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46016%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 87,
@@ -1282,7 +2757,24 @@ const MOVIES = [
     ],
     "year": 2011,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/5322596/"
+    "douban_url": "https://movie.douban.com/subject/5322596/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F70zllnaq7qcxtj0.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjy9aic.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss12579%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 88,
@@ -1296,22 +2788,34 @@ const MOVIES = [
     ],
     "year": 2002,
     "countries": "英国 美国",
-    "douban_url": "https://movie.douban.com/subject/1296996/"
-  },
-  {
-    "id": 89,
-    "title": "一一",
-    "poster_url": "data/posters/089.jpg",
-    "synopsis": "",
-    "rating": 9.1,
-    "categories": [
-      "剧情",
-      "爱情",
-      "家庭"
-    ],
-    "year": 2000,
-    "countries": "中国台湾 日本",
-    "douban_url": "https://movie.douban.com/subject/1292434/"
+    "douban_url": "https://movie.douban.com/subject/1296996/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fwe0v1e4gwbyz0et.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D711740888%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_3019c1d68c3711e0a046.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjbeuig.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss28296%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 90,
@@ -1326,24 +2830,19 @@ const MOVIES = [
     ],
     "year": 1999,
     "countries": "中国香港",
-    "douban_url": "https://movie.douban.com/subject/1302425/"
-  },
-  {
-    "id": 91,
-    "title": "杀人回忆",
-    "poster_url": "data/posters/091.jpg",
-    "synopsis": "",
-    "rating": 8.9,
-    "categories": [
-      "剧情",
-      "动作",
-      "犯罪",
-      "悬疑",
-      "惊悚"
-    ],
-    "year": 2003,
-    "countries": "韩国",
-    "douban_url": "https://movie.douban.com/subject/1300299/"
+    "douban_url": "https://movie.douban.com/subject/1302425/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fmzc002002r057wc.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss223260%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 92,
@@ -1358,7 +2857,24 @@ const MOVIES = [
     ],
     "year": 2003,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1297192/"
+    "douban_url": "https://movie.douban.com/subject/1297192/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fm20rv1nkogo1iky.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrk30rh0.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss159616%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 93,
@@ -1373,22 +2889,29 @@ const MOVIES = [
     ],
     "year": 1936,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1294371/"
-  },
-  {
-    "id": 94,
-    "title": "春光乍泄",
-    "poster_url": "data/posters/094.jpg",
-    "synopsis": "",
-    "rating": 9.0,
-    "categories": [
-      "剧情",
-      "爱情",
-      "同性"
-    ],
-    "year": 1997,
-    "countries": "中国香港 日本 韩国",
-    "douban_url": "https://movie.douban.com/subject/1292679/"
+    "douban_url": "https://movie.douban.com/subject/1294371/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F9w35g1rr7w3smmr.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrj6sjrw.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cbfb368a962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss26258%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   },
   {
     "id": 95,
@@ -1403,7 +2926,29 @@ const MOVIES = [
     ],
     "year": 2003,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1298070/"
+    "douban_url": "https://movie.douban.com/subject/1298070/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D701144148%26pwId%3DPRO_dd0be2c9236541e6a7f0ef05a9545e0a%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F6bxb2yc7mskrdoz.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "单片付费",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46245%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XNjI0Nzg1NDg4.html&subtype=3&type=online-video"
+      }
+    ]
   },
   {
     "id": 96,
@@ -1416,7 +2961,24 @@ const MOVIES = [
     ],
     "year": 2009,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/3442220/"
+    "douban_url": "https://movie.douban.com/subject/3442220/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F1fl91giyegazfl4.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D624310090%26pwId%3Dd01197d3076b4164af82983c408bb996&subtype=15&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrk4jq7o.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 97,
@@ -1430,7 +2992,34 @@ const MOVIES = [
     ],
     "year": 1984,
     "countries": "美国 意大利",
-    "douban_url": "https://movie.douban.com/subject/1292262/"
+    "douban_url": "https://movie.douban.com/subject/1292262/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D621951760%26pwId%3DPRO_ae6e3f2842ad490eb01eef57a41ab0a7%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fr3rpkp47bmoo9ch.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss41308%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc02456a962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_1sbjn5g7ldg.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 98,
@@ -1446,7 +3035,29 @@ const MOVIES = [
     ],
     "year": 2006,
     "countries": "日本",
-    "douban_url": "https://movie.douban.com/subject/1865703/"
+    "douban_url": "https://movie.douban.com/subject/1865703/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Ffv9mo7z6kyqfmxt.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XNjM4MDI4MjgwMA%3D%3D.html%3Ftpa%3DdW5pb25faWQ9MzAwMDA4XzEwMDAwMl8wMl8wMQ%26refer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss47215%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rr7pytks.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 99,
@@ -1462,7 +3073,19 @@ const MOVIES = [
     ],
     "year": 1995,
     "countries": "美国",
-    "douban_url": "https://movie.douban.com/subject/1292223/"
+    "douban_url": "https://movie.douban.com/subject/1292223/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fzg7bhyyc1ffeha0.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rwfpg4o4.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
   },
   {
     "id": 100,
@@ -1477,6 +3100,498 @@ const MOVIES = [
     ],
     "year": 1993,
     "countries": "中国香港",
-    "douban_url": "https://movie.douban.com/subject/1306249/"
+    "douban_url": "https://movie.douban.com/subject/1306249/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D676777252%26pwId%3DPRO_13aea91ca8a94666bdd0189b31886fe3%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fe3pdjwjjbbcmsow.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc036bd4962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrlunup8.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "title": "狩猎",
+    "poster_url": "data/posters/101.jpg",
+    "synopsis": "人言可畏。",
+    "rating": 9.1,
+    "categories": [
+      "剧情"
+    ],
+    "year": 2012,
+    "countries": "丹麦 瑞典",
+    "douban_url": "https://movie.douban.com/subject/6985810/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F3l1jyy54yxbi4ja.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss68601%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrnafjhg.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_285ad26c8f7111e1b52a.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "title": "甜蜜蜜",
+    "poster_url": "data/posters/103.jpg",
+    "synopsis": "",
+    "rating": 8.9,
+    "categories": [
+      "剧情",
+      "爱情"
+    ],
+    "year": 1996,
+    "countries": "中国香港",
+    "douban_url": "https://movie.douban.com/subject/1305164/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Frur37shpkgmze3o.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc038cae962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_pr1emqqqzw.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss44559%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "title": "蝙蝠侠：黑暗骑士崛起",
+    "poster_url": "data/posters/106.jpg",
+    "synopsis": "诺兰就是保证。",
+    "rating": 8.9,
+    "categories": [
+      "剧情",
+      "动作",
+      "科幻",
+      "犯罪",
+      "惊悚"
+    ],
+    "year": 2012,
+    "countries": "美国 英国",
+    "douban_url": "https://movie.douban.com/subject/3395373/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D651583190%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F1b117d3s47s9rwx.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rra0ffm8.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_294a6ccc9f9611df97c0.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "title": "超能陆战队",
+    "poster_url": "data/posters/107.jpg",
+    "synopsis": "Balalala~~~",
+    "rating": 8.8,
+    "categories": [
+      "喜剧",
+      "动作",
+      "科幻",
+      "动画",
+      "冒险"
+    ],
+    "year": 2014,
+    "countries": "美国",
+    "douban_url": "https://movie.douban.com/subject/11026735/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fhjdb95f8lxcyyew.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_0d638004b91d11e29498.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46277%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrntpmhg.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "title": "第六感",
+    "poster_url": "data/posters/109.jpg",
+    "synopsis": "",
+    "rating": 8.9,
+    "categories": [
+      "剧情",
+      "悬疑",
+      "惊悚"
+    ],
+    "year": 1999,
+    "countries": "美国",
+    "douban_url": "https://movie.douban.com/subject/1297630/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fr59i2am7z2pg81w.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D720941864%26pwId%3DPRO_97aeaa341b64455895ade91edd375869%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "单片付费",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XNjI3MzgwNDM2.html%3Ftpa%3DdW5pb25faWQ9MzAwMDA4XzEwMDAwMl8wMl8wMQ%26refer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjbsozo.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46333%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "title": "茶馆",
+    "poster_url": "data/posters/110.jpg",
+    "synopsis": "",
+    "rating": 9.5,
+    "categories": [
+      "剧情",
+      "历史"
+    ],
+    "year": 1982,
+    "countries": "中国大陆",
+    "douban_url": "https://movie.douban.com/subject/1461403/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Flw7tt45cgl3rnhd.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss39921%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rr7qcms0.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "title": "爱在黎明破晓前",
+    "poster_url": "data/posters/111.jpg",
+    "synopsis": "",
+    "rating": 8.8,
+    "categories": [
+      "剧情",
+      "爱情"
+    ],
+    "year": 1995,
+    "countries": "美国 奥地利 瑞士",
+    "douban_url": "https://movie.douban.com/subject/1296339/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D713001798%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F7ci0ax0zwtztdot.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc02cf9e962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rra0khao.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss32312%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "title": "爱在日落黄昏时",
+    "poster_url": "data/posters/112.jpg",
+    "synopsis": "九年后的重逢是世俗和责任的交叠，没了悸动和青涩，沧桑而温暖。",
+    "rating": 8.9,
+    "categories": [
+      "剧情",
+      "爱情"
+    ],
+    "year": 2004,
+    "countries": "美国 法国",
+    "douban_url": "https://movie.douban.com/subject/1291990/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F9q1fcwkoeem19d5.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_cc02cf1c962411de83b1.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjba7jk.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss34256%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "title": "被嫌弃的松子的一生",
+    "poster_url": "data/posters/113.jpg",
+    "synopsis": "以戏谑来戏谑戏谑。",
+    "rating": 8.8,
+    "categories": [
+      "剧情",
+      "歌舞"
+    ],
+    "year": 2006,
+    "countries": "日本",
+    "douban_url": "https://movie.douban.com/subject/1787291/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F2xxvt9eg1d231wv.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "title": "头脑特工队",
+    "poster_url": "data/posters/114.jpg",
+    "synopsis": "愿我们都不用长大，每一座城堡都能永远存在。",
+    "rating": 8.8,
+    "categories": [
+      "喜剧",
+      "动画",
+      "冒险"
+    ],
+    "year": 2015,
+    "countries": "美国",
+    "douban_url": "https://movie.douban.com/subject/10533913/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2F7m14vtdrrg3xr78.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D700319137%26pwId%3DPRO_67263be6459c44908220e16eb9f7d851%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_6aa142de3c8911e3b8b7.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrk9svco.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss46265%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "title": "哈利·波特与火焰杯",
+    "poster_url": "data/posters/115.jpg",
+    "synopsis": "",
+    "rating": 8.8,
+    "categories": [
+      "悬疑",
+      "奇幻",
+      "冒险"
+    ],
+    "year": 2005,
+    "countries": "英国 美国",
+    "douban_url": "https://movie.douban.com/subject/1309055/",
+    "streaming": [
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D711750272%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fo275c9svl35mdv9.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.youku.com%2Falipay_video%2Fid_633a84ee8c3a11e0a046.html%3Frefer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrjbfy7k.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss28298%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "title": "菊次郎的夏天",
+    "poster_url": "data/posters/119.jpg",
+    "synopsis": "",
+    "rating": 8.9,
+    "categories": [
+      "剧情",
+      "喜剧"
+    ],
+    "year": 1999,
+    "countries": "日本",
+    "douban_url": "https://movie.douban.com/subject/1293359/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Fbdbcer5v3qcjioz.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss11978%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      },
+      {
+        "platform": "爱奇艺",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.iqiyi.com%2Fv_19rrn8d6vc.html%3Fvfm%3Dm_331_dbdy%26fv%3D4904d94982104144a1548dd9040df241&subtype=9&type=online-video"
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "title": "入殓师",
+    "poster_url": "data/posters/120.jpg",
+    "synopsis": "死可能是一道门，逝去并不是终结，而是超越，走向下一程。",
+    "rating": 8.9,
+    "categories": [
+      "剧情"
+    ],
+    "year": 2008,
+    "countries": "日本",
+    "douban_url": "https://movie.douban.com/subject/2149806/",
+    "streaming": [
+      {
+        "platform": "腾讯视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fv.qq.com%2Fx%2Fcover%2Ft3wqrzw91qazceg.html%3Fptag%3Dnewdouban.movie&subtype=1&type=online-video"
+      },
+      {
+        "platform": "咪咕视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.miguvideo.com%2Fmgs%2Fmsite%2Fprd%2Fdetail.html%3Fcid%3D624310284%26pwId%3Dd01197d3076b4164af82983c408bb996%26pkgId%3Dnull&subtype=15&type=online-video"
+      },
+      {
+        "platform": "优酷视频",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=http%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XNDE5ODIxMDky.html%3Ftpa%3DdW5pb25faWQ9MzAwMDA4XzEwMDAwMl8wMl8wMQ%26refer%3Desfhz_operation.xuka.xj_00003036_000000_FNZfau_19010900&subtype=3&type=online-video"
+      },
+      {
+        "platform": "哔哩哔哩",
+        "type": "VIP免费观看",
+        "url": "https://www.douban.com/link2/?url=https%3A%2F%2Fm.bilibili.com%2Fbangumi%2Fplay%2Fss41342%3Fbsource%3Ddoubanh5&subtype=8&type=online-video"
+      }
+    ]
   }
 ];

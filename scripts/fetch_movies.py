@@ -28,16 +28,38 @@ HEADERS = {
     "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
 }
 
+# 豆瓣平台图标文件名 → 中文名映射
+PLATFORM_MAP = {
+    "miguvideo": "咪咕视频",
+    "qq": "腾讯视频",
+    "bilibili": "哔哩哔哩",
+    "iqiyi": "爱奇艺",
+    "youku": "优酷视频",
+    "mgtv": "芒果TV",
+    "hulu": "Hulu",
+    "netflix": "Netflix",
+    "disney": "Disney+",
+    "amazon": "Amazon",
+    "cctv": "CCTV",
+    "xigua": "西瓜视频",
+    "pptv": "PPTV",
+    "sohu": "搜狐视频",
+    "1905": "1905电影网",
+}
+
 
 def load_config():
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
 
 
-def fetch_page(url, retries=3):
+def fetch_page(url, retries=3, session=None):
     for i in range(retries):
         try:
-            resp = requests.get(url, headers=HEADERS, timeout=15)
+            if session:
+                resp = session.get(url, timeout=15)
+            else:
+                resp = requests.get(url, headers=HEADERS, timeout=15)
             resp.raise_for_status()
             return resp.text
         except requests.RequestException as e:
@@ -45,6 +67,127 @@ def fetch_page(url, retries=3):
             if i < retries - 1:
                 time.sleep(3)
     return None
+
+
+def parse_streaming_platforms(soup):
+    """从详情页解析「在哪儿看这部电影」板块，返回平台列表"""
+    platforms = []
+
+    # 定位 h2 标题
+    h2 = soup.find("h2", string=lambda t: t and "在哪儿看" in t)
+    if not h2:
+        return platforms
+
+    # 取 h2 所在容器（通常为 <div> 或 <section>）
+    container = h2.find_parent()
+    if not container:
+        return platforms
+
+    items = container.find_all("li")
+    for li in items:
+        platform_name = ""
+        access_type = ""
+        url = ""
+
+        # 1) 从 <a> 标签提取平台名和链接
+        a_tag = li.find("a")
+        if a_tag:
+            url = a_tag.get("href", "")
+            a_text = a_tag.get_text(strip=True)
+            if a_text:
+                platform_name = a_text
+
+        # 2) 从图标文件名推断平台名
+        if not platform_name:
+            img = li.find("img")
+            if img:
+                src = img.get("src", "")
+                for key, name in PLATFORM_MAP.items():
+                    if key in src:
+                        platform_name = name
+                        break
+                if not platform_name:
+                    platform_name = img.get("alt", "")
+
+        # 3) 从 li 文本中提取（排除观看方式描述）
+        if not platform_name:
+            text = li.get_text(strip=True)
+            for kw in ("VIP免费观看", "免费观看", "用券观看", "付费观看",
+                        "会员免费观看", "单片付费"):
+                text = text.replace(kw, "")
+            platform_name = text.strip()
+
+        # 提取观看方式
+        li_text = li.get_text(strip=True)
+        for kw in ("VIP免费观看", "会员免费观看", "免费观看",
+                    "用券观看", "付费观看", "单片付费"):
+            if kw in li_text:
+                access_type = kw
+                break
+
+        if platform_name:
+            entry = {"platform": platform_name}
+            if access_type:
+                entry["type"] = access_type
+            if url:
+                entry["url"] = url
+            platforms.append(entry)
+
+    return platforms
+
+
+def fetch_streaming_info(movies, cookie_str=None):
+    """逐部抓取详情页的在线播放信息，直接写入每部电影的 streaming 字段"""
+    session = requests.Session()
+    session.headers.update(HEADERS)
+    if cookie_str:
+        # 确保 cookie 字符串是 ASCII 编码的
+        try:
+            session.headers["Cookie"] = cookie_str.encode('ascii', 'ignore').decode('ascii')
+        except Exception as e:
+            print(f"  Cookie 编码失败: {e}")
+            # 继续执行，不使用 cookie
+
+    total = len(movies)
+    updated = 0
+
+    for i, movie in enumerate(movies):
+        douban_url = movie.get("douban_url")
+        if not douban_url:
+            movie["streaming"] = []
+            continue
+
+        title = movie.get("title", "")
+        print(f"  [{i+1}/{total}] {title} ...", end=" ", flush=True)
+
+        html = fetch_page(douban_url, retries=2, session=session)
+        if not html:
+            print("失败")
+            movie["streaming"] = []
+            continue
+
+        if "登录跳转" in html:
+            print("被反爬拦截，需 --cookie")
+            movie["streaming"] = []
+            continue
+
+        soup = BeautifulSoup(html, "html.parser")
+        platforms = parse_streaming_platforms(soup)
+        movie["streaming"] = platforms
+        updated += 1
+
+        count = len(platforms)
+        if count:
+            names = ", ".join(p["platform"] for p in platforms)
+            print(f"{count} 平台 ({names})")
+        else:
+            print("暂无")
+
+        # 礼貌延迟
+        time.sleep(3)
+
+    print(f"\n  已获取 {updated}/{total} 部电影的在线播放信息")
+    return movies
 
 
 def parse_movie_info(info_text):
@@ -164,7 +307,7 @@ def scrape_douban(config, top_n):
     return movies
 
 
-def download_posters(movies, posters_dir):
+def download_posters(movies, posters_dir, session=None):
     """下载海报图片到本地，并将 poster_url 更新为本地相对路径"""
     os.makedirs(posters_dir, exist_ok=True)
     for movie in movies:
@@ -175,17 +318,37 @@ def download_posters(movies, posters_dir):
         filepath = os.path.join(posters_dir, filename)
         if not os.path.exists(filepath):
             try:
-                resp = requests.get(url, headers={**HEADERS, "Referer": "https://movie.douban.com/"}, timeout=15)
+                if session:
+                    resp = session.get(url, headers={**HEADERS, "Referer": "https://movie.douban.com/"}, timeout=15)
+                else:
+                    resp = requests.get(url, headers={**HEADERS, "Referer": "https://movie.douban.com/"}, timeout=15)
                 resp.raise_for_status()
                 with open(filepath, "wb") as f:
                     f.write(resp.content)
                 print(f"  下载海报: {movie['title']}")
             except requests.RequestException as e:
                 print(f"  海报下载失败 [{movie['title']}]: {e}")
+                # 即使下载失败，也更新为本地路径，避免前端加载远程图片
+                movie["poster_url"] = f"data/posters/{filename}"
                 continue
             time.sleep(0.3)
         # 更新为本地相对路径
         movie["poster_url"] = f"data/posters/{filename}"
+
+
+def generate_data_js(movies, path, require_streaming=False):
+    """将 movies 数据写入 data.js（供前端静态加载）"""
+    data = movies
+    if require_streaming:
+        data = [m for m in movies if m.get("streaming")]
+        print(f"  过滤：{len(movies)} → {len(data)} 部（仅保留有播放源的）")
+    js = "// Movie Fairy - 电影数据（由 fetch_movies.py 生成）\n"
+    js += "const MOVIES = "
+    js += json.dumps(data, ensure_ascii=False, indent=2)
+    js += ";\n"
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(js)
+    print(f"  前端数据已同步到 {path}（{len(data)} 部）")
 
 
 def main():
@@ -193,9 +356,36 @@ def main():
     parser.add_argument("--source", default=None, help="数据源: douban / imdb")
     parser.add_argument("--top", type=int, default=None, help="抓取数量")
     parser.add_argument("--download-posters", action="store_true", help="下载海报到本地")
+    parser.add_argument("--fetch-streaming", action="store_true",
+                        help="抓取每部电影的在线播放信息")
+    parser.add_argument("--cookie", default=None,
+                        help="豆瓣 cookie 字符串（访问详情页必需）")
+    parser.add_argument("--require-streaming", action="store_true",
+                        help="生成 data.js 时过滤掉没有播放源的电影")
     args = parser.parse_args()
 
     config = load_config()
+    output_path = os.path.join(SCRIPT_DIR, config["output"]["movies_json"])
+
+    # 仅抓取在线播放信息（基于已有 movies.json）
+    if args.fetch_streaming and not args.top:
+        if not os.path.exists(output_path):
+            print(f"未找到 {output_path}，请先抓取电影列表。")
+            sys.exit(1)
+        with open(output_path, "r", encoding="utf-8") as f:
+            movies = json.load(f)
+        print(f"从 {output_path} 加载了 {len(movies)} 部电影")
+        print(f"开始抓取在线播放信息 ...\n")
+        fetch_streaming_info(movies, cookie_str=args.cookie)
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(movies, f, ensure_ascii=False, indent=2)
+        print(f"\n已保存到 {output_path}")
+        data_js_path = os.path.join(SCRIPT_DIR, config["output"]["data_js"])
+        generate_data_js(movies, data_js_path, require_streaming=args.require_streaming)
+        print("\n完成！")
+        return
+
+    # 正常抓取电影列表
     source = args.source or config.get("source", "douban")
     top_n = args.top or config.get("top_n", 100)
 
@@ -219,12 +409,26 @@ def main():
         print(f"\n开始下载海报到 {posters_dir}")
         download_posters(movies, posters_dir)
 
+    # 抓取在线播放信息
+    if args.fetch_streaming:
+        print(f"\n开始抓取在线播放信息 ...\n")
+        # 保存海报路径，避免被覆盖
+        poster_paths = {movie['id']: movie['poster_url'] for movie in movies}
+        fetch_streaming_info(movies, cookie_str=args.cookie)
+        # 恢复海报路径
+        for movie in movies:
+            if movie['id'] in poster_paths:
+                movie['poster_url'] = poster_paths[movie['id']]
+
     # 保存 movies.json
-    output_path = os.path.join(SCRIPT_DIR, config["output"]["movies_json"])
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(movies, f, ensure_ascii=False, indent=2)
     print(f"\n已保存 {len(movies)} 部电影到 {output_path}")
+
+    # 同步 data.js
+    data_js_path = os.path.join(SCRIPT_DIR, config["output"]["data_js"])
+    generate_data_js(movies, data_js_path, require_streaming=args.require_streaming)
 
     print("\n完成！")
 

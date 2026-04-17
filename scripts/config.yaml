@@ -10,4 +10,5 @@ douban:
 # 输出路径（相对于项目根目录）
 output:
   movies_json: ../data/movies.json
+  data_js: ../js/data.js
   posters_dir: ../data/posters

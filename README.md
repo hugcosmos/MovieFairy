@@ -10,14 +10,19 @@
 ## 本地运行
 
 ```bash
-# 1. 抓取电影数据 + 海报
+# 1. 克隆仓库
+git clone https://github.com/hugcosmos/MovieFairy.git
+cd MovieFairy
+
+# 2. 安装依赖
 cd scripts
 pip install -r requirements.txt
-python fetch_movies.py --download-posters
 
-# 2. 打开页面
-# 直接双击 index.html，或：
-python -m http.server 8765
+# 3. 查看脚本帮助
+python fetch_movies.py --help
+
+# 4. 运行脚本（示例：抓取 50 部电影，下载海报，获取播放信息）
+python fetch_movies.py --top 50 --download-posters --fetch-streaming --cookie "你的豆瓣Cookie"
 ```
 
 ## 数据来源

@@ -155,19 +155,38 @@ function pickWeighted(scored, topN = 8, temperature = 1.0) {
  *
  * @param {Array} movies - 电影数据列表
  * @param {Object} mood - 情绪分析结果（来自 questions.js）
- * @returns {{ movie: Object }}
+ * @returns {{ movie: Object, candidates: Array }}
  */
 function recommend(movies, mood) {
   const scored = scoreMovies(movies, mood.profile, mood.social);
+  const candidates = scored.slice(0, 8).map(m => {
+    const clean = { ...m };
+    delete clean._score;
+    return clean;
+  });
   const movie = pickWeighted(scored);
 
   const clean = { ...movie };
   delete clean._score;
 
-  return { movie: clean };
+  return { movie: clean, candidates };
+}
+
+/**
+ * 从候选池中随机选择一部（用于"换一部"功能）
+ *
+ * @param {Array} candidates - 候选池
+ * @param {Object} currentMovie - 当前电影（避免重复）
+ * @returns {Object} 推荐的电影
+ */
+function pickFromCandidates(candidates, currentMovie) {
+  const available = candidates.filter(m => m.id !== currentMovie.id);
+  if (available.length === 0) return null;
+  const idx = Math.floor(Math.random() * available.length);
+  return available[idx];
 }
 
 // 导出
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { scoreMovies, recommend, pickWeighted, STRATEGY_PREFERENCES, SOCIAL_MODIFIER, IGNORED_CATEGORIES };
+  module.exports = { scoreMovies, recommend, pickWeighted, pickFromCandidates, STRATEGY_PREFERENCES, SOCIAL_MODIFIER, IGNORED_CATEGORIES };
 }
