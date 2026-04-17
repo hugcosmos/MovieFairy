@@ -307,33 +307,53 @@ def scrape_douban(config, top_n):
     return movies
 
 
-def download_posters(movies, posters_dir, session=None):
-    """下载海报图片到本地，并将 poster_url 更新为本地相对路径"""
+def download_posters(movies, posters_dir, session=None, update_url=True):
+    """下载海报图片到本地"""
     os.makedirs(posters_dir, exist_ok=True)
     for movie in movies:
-        url = movie["poster_url"]
-        if not url:
-            continue
+        poster_url = movie.get("poster_url", "")
+        douban_url = movie.get("douban_url", "")
         filename = f"{movie['id']:03d}.jpg"
         filepath = os.path.join(posters_dir, filename)
-        if not os.path.exists(filepath):
+        
+        if os.path.exists(filepath):
+            continue
+        
+        # 如果 poster_url 是本地路径或为空，从 douban_url 获取海报 URL
+        if poster_url.startswith("data/") or not poster_url:
+            if not douban_url:
+                continue
             try:
                 if session:
-                    resp = session.get(url, headers={**HEADERS, "Referer": "https://movie.douban.com/"}, timeout=15)
+                    resp = session.get(douban_url, headers=HEADERS, timeout=15)
                 else:
-                    resp = requests.get(url, headers={**HEADERS, "Referer": "https://movie.douban.com/"}, timeout=15)
+                    resp = requests.get(douban_url, headers=HEADERS, timeout=15)
                 resp.raise_for_status()
-                with open(filepath, "wb") as f:
-                    f.write(resp.content)
-                print(f"  下载海报: {movie['title']}")
-            except requests.RequestException as e:
-                print(f"  海报下载失败 [{movie['title']}]: {e}")
-                # 即使下载失败，也更新为本地路径，避免前端加载远程图片
-                movie["poster_url"] = f"data/posters/{filename}"
+                soup = BeautifulSoup(resp.text, "html.parser")
+                img = soup.select_one("#mainpic img")
+                if not img or not img.get("src"):
+                    continue
+                poster_url = img["src"]
+            except Exception as e:
+                print(f"  获取海报URL失败 [{movie['title']}]: {e}")
                 continue
+        
+        # 下载海报
+        try:
+            if session:
+                img_resp = session.get(poster_url, headers={**HEADERS, "Referer": "https://movie.douban.com/"}, timeout=15)
+            else:
+                img_resp = requests.get(poster_url, headers={**HEADERS, "Referer": "https://movie.douban.com/"}, timeout=15)
+            img_resp.raise_for_status()
+            with open(filepath, "wb") as f:
+                f.write(img_resp.content)
+            print(f"  下载海报: {movie['title']}")
+            # 只有 update_url=True 且原 poster_url 是远程 URL 时才更新
+            if update_url and not movie.get("poster_url", "").startswith("data/"):
+                movie["poster_url"] = f"data/posters/{filename}"
             time.sleep(0.3)
-        # 更新为本地相对路径
-        movie["poster_url"] = f"data/posters/{filename}"
+        except Exception as e:
+            print(f"  海报下载失败 [{movie['title']}]: {e}")
 
 
 def generate_data_js(movies, path, require_streaming=False):
