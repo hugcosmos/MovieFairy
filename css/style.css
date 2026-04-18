@@ -228,6 +228,68 @@ body::after {
   line-height: 1.5;
 }
 
+/* === 平台筛选 === */
+.platform-section {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 24px;
+}
+
+.platform-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}
+
+.platform-chips {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.platform-chip {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1.5px solid var(--warm-border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.platform-chip:hover {
+  border-color: var(--accent);
+  background: rgba(212,132,90,0.06);
+}
+
+.platform-chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.back-platform-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: var(--font);
+  padding: 0;
+  transition: color 0.2s;
+}
+.back-platform-link:hover {
+  color: var(--accent);
+}
+
 .start-btn {
   display: inline-flex;
   align-items: center;
@@ -691,4 +753,6 @@ body::after {
   .question-body { padding: 24px 20px 28px; }
   .result-body { padding: 20px 20px 24px; }
   .poster-section { max-height: 300px; }
+  .platform-chips { flex-wrap: wrap; }
+  .platform-chip { padding: 5px 10px; font-size: 11px; }
 }

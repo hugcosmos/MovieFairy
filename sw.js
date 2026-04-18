@@ -1,4 +1,4 @@
-const CACHE_NAME = "moviefairy-v1";
+const CACHE_NAME = "moviefairy-v2";
 const ASSETS = [
   "/",
   "/index.html",
@@ -8,6 +8,8 @@ const ASSETS = [
   "/js/recommender.js",
   "/js/app.js",
   "/manifest.json",
+  "/icons/icon-192.png",
+  "/icons/icon-512.png",
 ];
 
 self.addEventListener("install", (e) => {

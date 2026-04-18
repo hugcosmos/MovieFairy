@@ -9,6 +9,7 @@
   let answers = [];
   let candidates = [];
   let currentMovie = null;
+  let selectedPlatforms = [];
 
   const container = document.getElementById("app");
 
@@ -71,6 +72,14 @@
               <div class="feature-text">豆瓣 Top<br>精选好电影</div>
             </div>
           </div>
+          <div class="platform-section">
+            <div class="platform-label">我有这些平台的会员</div>
+            <div class="platform-chips">
+              ${["腾讯视频","爱奇艺","优酷视频","哔哩哔哩","咪咕视频"].map(p =>
+                `<button class="platform-chip${selectedPlatforms.includes(p) ? " active" : ""}" data-platform="${p}">${p}</button>`
+              ).join("")}
+            </div>
+          </div>
           <button class="start-btn" id="startBtn">
             开始吧 <span class="arrow">&rarr;</span>
           </button>
@@ -78,6 +87,19 @@
       </div>
     `;
     document.getElementById("startBtn").addEventListener("click", startQuestions);
+
+    container.querySelectorAll(".platform-chip").forEach(chip => {
+      chip.addEventListener("click", () => {
+        const p = chip.dataset.platform;
+        if (selectedPlatforms.includes(p)) {
+          selectedPlatforms = selectedPlatforms.filter(x => x !== p);
+          chip.classList.remove("active");
+        } else {
+          selectedPlatforms.push(p);
+          chip.classList.add("active");
+        }
+      });
+    });
   }
 
   /** 开始问答 */
@@ -140,6 +162,10 @@
             <line x1="15" y1="9" x2="15.01" y2="9"/>
           </svg>
           <span>没有对错，跟着感觉选就好</span>
+          ${currentStep === 0 ? `<button class="back-platform-link" id="backPlatformBtn">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+            重选视频平台
+          </button>` : ""}
         </div>
       </div>
     `;
@@ -155,13 +181,25 @@
         }
       });
     });
+
+    const backBtn = document.getElementById("backPlatformBtn");
+    if (backBtn) {
+      backBtn.addEventListener("click", () => {
+        selectedPlatforms = [];
+        renderWelcome();
+      });
+    }
   }
 
   /** 渲染推荐结果 */
   function renderResult(keepAnswers = false) {
     if (!keepAnswers) {
       const mood = analyzeMood(answers);
-      const result = recommend(movies, mood);
+      let filtered = selectedPlatforms.length > 0
+        ? movies.filter(m => (m.streaming || []).some(s => selectedPlatforms.includes(s.platform)))
+        : movies;
+      if (filtered.length === 0) filtered = movies;
+      const result = recommend(filtered, mood);
       currentMovie = result.movie;
       candidates = result.candidates;
     }
@@ -192,7 +230,7 @@
           ${movie.synopsis ? `<div class="result-synopsis">"${movie.synopsis}"</div>` : ""}
           <div class="result-message">${message}</div>
           ${(() => {
-              const list = movie.streaming || [];
+              const list = (movie.streaming || []).filter(s => selectedPlatforms.length === 0 || selectedPlatforms.includes(s.platform));
               return `<div class="streaming-section">
                 <div class="streaming-title">在哪儿看</div>
                 ${list.length > 0
