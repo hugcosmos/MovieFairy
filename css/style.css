@@ -194,10 +194,15 @@ body::after {
 }
 
 .welcome-desc {
-  font-size: 15px;
-  color: var(--text-secondary);
-  line-height: 1.8;
+  font-size: 17px;
+  color: var(--text);
+  line-height: 1.9;
   margin-bottom: 24px;
+  letter-spacing: 0.3px;
+}
+.desc-accent {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .welcome-features {
@@ -290,21 +295,28 @@ body::after {
   color: var(--accent);
 }
 
+.welcome-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
 .start-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 16px 52px;
+  padding: 15px 40px;
   background: var(--accent);
   color: #fff;
   border: none;
   border-radius: 50px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
   box-shadow: 0 4px 16px rgba(212,132,90,0.25);
   letter-spacing: 0.5px;
+  font-family: var(--font);
 }
 .start-btn:hover {
   background: var(--accent-hover);
@@ -314,6 +326,48 @@ body::after {
 .start-btn:active { transform: translateY(0); }
 .start-btn .arrow { transition: transform 0.2s; }
 .start-btn:hover .arrow { transform: translateX(3px); }
+
+.lucky-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 15px 28px;
+  background: linear-gradient(135deg, #f4c5b5 0%, #fdd9b5 50%, #f4c5b5 100%);
+  background-size: 200% 200%;
+  color: var(--accent);
+  border: 1.5px solid var(--accent-light);
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: var(--font);
+  letter-spacing: 0.5px;
+  animation: shimmer 3s ease-in-out infinite;
+  position: relative;
+}
+.lucky-btn svg {
+  animation: sparkle-spin 2.5s ease-in-out infinite;
+}
+.lucky-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(212,132,90,0.25);
+}
+.lucky-btn:hover svg { animation: none; }
+.lucky-btn:active { transform: translateY(0); }
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes sparkle-spin {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(15deg) scale(1.15); }
+  75% { transform: rotate(-15deg) scale(1.15); }
+}
 
 /* ============================= */
 /* === 问题卡片 === */

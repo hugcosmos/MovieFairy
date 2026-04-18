@@ -10,6 +10,7 @@
   let candidates = [];
   let currentMovie = null;
   let selectedPlatforms = [];
+  let isLuckyMode = false;
 
   const container = document.getElementById("app");
 
@@ -50,20 +51,20 @@
         </div>
         <div class="welcome-content">
           <div class="welcome-desc">
-            回答 3 个小问题，<br>让我为你挑一部合适的电影。
+            答 3 个小题，或开个盲盒，<br>为你挑一部<span class="desc-accent">好电影</span>。
           </div>
           <div class="welcome-features">
             <div class="feature-item">
               <span class="feature-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4845a" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
               </span>
-              <div class="feature-text">3 个问题<br>感知你心情</div>
+              <div class="feature-text">诚意推荐<br>感知你状态</div>
             </div>
             <div class="feature-item">
               <span class="feature-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4845a" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4845a" stroke-width="1.8"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </span>
-              <div class="feature-text">诚意推荐<br>温暖不敷衍</div>
+              <div class="feature-text">平台匹配<br>现在就能看</div>
             </div>
             <div class="feature-item">
               <span class="feature-icon">
@@ -80,13 +81,20 @@
               ).join("")}
             </div>
           </div>
-          <button class="start-btn" id="startBtn">
-            开始吧 <span class="arrow">&rarr;</span>
-          </button>
+          <div class="welcome-actions">
+            <button class="start-btn" id="startBtn">
+              开测吧 <span class="arrow">&rarr;</span>
+            </button>
+            <button class="lucky-btn" id="luckyBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              开盲盒
+            </button>
+          </div>
         </div>
       </div>
     `;
     document.getElementById("startBtn").addEventListener("click", startQuestions);
+    document.getElementById("luckyBtn").addEventListener("click", feelingLucky);
 
     container.querySelectorAll(".platform-chip").forEach(chip => {
       chip.addEventListener("click", () => {
@@ -102,8 +110,29 @@
     });
   }
 
+  /** 开盲盒 - 跳过答题，随机推荐 */
+  function feelingLucky() {
+    let pool = selectedPlatforms.length > 0
+      ? movies.filter(m => (m.streaming || []).some(s => selectedPlatforms.includes(s.platform)))
+      : movies.slice();
+    if (pool.length === 0) pool = movies.slice();
+
+    // 打乱后取 top 8 作为候选池
+    for (let i = pool.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    const picked = pool.slice(0, 8);
+    currentMovie = picked[0];
+    candidates = picked.slice(1);
+    answers = [];
+    isLuckyMode = true;
+    renderResult(true, true);
+  }
+
   /** 开始问答 */
   function startQuestions() {
+    isLuckyMode = false;
     questions = pickQuestions();
     answers = [];
     currentStep = 0;
@@ -192,7 +221,7 @@
   }
 
   /** 渲染推荐结果 */
-  function renderResult(keepAnswers = false) {
+  function renderResult(keepAnswers = false, isLucky = false) {
     if (!keepAnswers) {
       const mood = analyzeMood(answers);
       let filtered = selectedPlatforms.length > 0
@@ -206,7 +235,9 @@
 
     const movie = currentMovie;
     const mood = keepAnswers ? analyzeMood(answers) : analyzeMood(answers);
-    const message = getRecommendationMessage(mood.profile);
+    const message = isLucky
+      ? "缘分让你遇见这部电影，希望你会喜欢。"
+      : getRecommendationMessage(mood.profile);
 
     const categories = movie.categories.join(" / ");
     const year = movie.year || "";
@@ -274,14 +305,13 @@
       const newMovie = pickFromCandidates(candidates, currentMovie);
       if (newMovie) {
         currentMovie = newMovie;
-        renderResult(true);
+        renderResult(true, isLuckyMode);
       }
     });
 
     document.getElementById("restartBtn").addEventListener("click", () => {
-      answers = [];
-      currentStep = 0;
-      renderQuestion();
+      isLuckyMode = false;
+      startQuestions();
     });
   }
 
