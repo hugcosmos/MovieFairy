@@ -1,0 +1,21 @@
+{
+  "name": "Movie Fairy",
+  "short_name": "MovieFairy",
+  "description": "一个善意且温柔的电影推荐工具",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a1a",
+  "theme_color": "#6c5ce7",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
