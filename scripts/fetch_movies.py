@@ -225,13 +225,23 @@ def parse_movie_info(info_text):
     return year, countries, categories
 
 
-def scrape_douban(config, top_n):
+def scrape_douban(config, top_n, cookie_str=None):
     """抓取豆瓣 Top 榜单"""
     base_url = config["douban"]["base_url"]
     per_page = config["douban"]["per_page"]
     pages = (top_n + per_page - 1) // per_page
 
     movies = []
+
+    session = None
+    if cookie_str:
+        session = requests.Session()
+        session.headers.update(HEADERS)
+        try:
+            session.headers["Cookie"] = cookie_str.encode('ascii', 'ignore').decode('ascii')
+        except Exception as e:
+            print(f"  Cookie 编码失败: {e}")
+            session = None
 
     for page in range(pages):
         start = page * per_page
@@ -242,7 +252,7 @@ def scrape_douban(config, top_n):
         url = f"{base_url}?start={start}&filter="
         print(f"正在抓取第 {page+1}/{pages} 页: {url}")
 
-        html = fetch_page(url)
+        html = fetch_page(url, session=session)
         if not html:
             print(f"  跳过第 {page+1} 页（请求失败）")
             continue
@@ -387,7 +397,21 @@ def main():
     config = load_config()
     output_path = os.path.join(SCRIPT_DIR, config["output"]["movies_json"])
 
-    # 仅抓取在线播放信息（基于已有 movies.json）
+    # 独立模式：仅下载海报（基于已有 movies.json）
+    if args.download_posters and not args.top:
+        if not os.path.exists(output_path):
+            print(f"未找到 {output_path}，请先抓取电影列表。")
+            sys.exit(1)
+        with open(output_path, "r", encoding="utf-8") as f:
+            movies = json.load(f)
+        print(f"从 {output_path} 加载了 {len(movies)} 部电影")
+        posters_dir = os.path.join(SCRIPT_DIR, config["output"]["posters_dir"])
+        print(f"开始下载海报到 {posters_dir}\n")
+        download_posters(movies, posters_dir, update_url=False)
+        print("\n完成！")
+        return
+
+    # 独立模式：仅抓取在线播放信息（基于已有 movies.json）
     if args.fetch_streaming and not args.top:
         if not os.path.exists(output_path):
             print(f"未找到 {output_path}，请先抓取电影列表。")
@@ -397,11 +421,17 @@ def main():
         print(f"从 {output_path} 加载了 {len(movies)} 部电影")
         print(f"开始抓取在线播放信息 ...\n")
         fetch_streaming_info(movies, cookie_str=args.cookie)
+
+        # 过滤掉没有播放源的电影
+        before = len(movies)
+        movies = [m for m in movies if m.get("streaming")]
+        print(f"过滤：{before} → {len(movies)} 部（仅保留有播放源的）")
+
         with open(output_path, "w", encoding="utf-8") as f:
             json.dump(movies, f, ensure_ascii=False, indent=2)
         print(f"\n已保存到 {output_path}")
         data_js_path = os.path.join(SCRIPT_DIR, config["output"]["data_js"])
-        generate_data_js(movies, data_js_path, require_streaming=args.require_streaming)
+        generate_data_js(movies, data_js_path)
         print("\n完成！")
         return
 
@@ -413,7 +443,7 @@ def main():
     print()
 
     if source == "douban":
-        movies = scrape_douban(config, top_n)
+        movies = scrape_douban(config, top_n, cookie_str=args.cookie)
     else:
         print(f"暂不支持数据源: {source}")
         print("支持的数据源: douban")
@@ -423,22 +453,21 @@ def main():
         print("未抓取到任何电影数据。")
         sys.exit(1)
 
-    # 下载海报（在保存 JSON 之前，这样 poster_url 会是本地路径）
+    # 抓取在线播放信息（在下载海报之前）
+    if args.fetch_streaming:
+        print(f"\n开始抓取在线播放信息 ...\n")
+        fetch_streaming_info(movies, cookie_str=args.cookie)
+
+        # 过滤掉没有播放源的电影
+        before = len(movies)
+        movies = [m for m in movies if m.get("streaming")]
+        print(f"过滤：{before} → {len(movies)} 部（仅保留有播放源的）")
+
+    # 下载海报（仅给有播放源的电影下载）
     if args.download_posters:
         posters_dir = os.path.join(SCRIPT_DIR, config["output"]["posters_dir"])
         print(f"\n开始下载海报到 {posters_dir}")
         download_posters(movies, posters_dir)
-
-    # 抓取在线播放信息
-    if args.fetch_streaming:
-        print(f"\n开始抓取在线播放信息 ...\n")
-        # 保存海报路径，避免被覆盖
-        poster_paths = {movie['id']: movie['poster_url'] for movie in movies}
-        fetch_streaming_info(movies, cookie_str=args.cookie)
-        # 恢复海报路径
-        for movie in movies:
-            if movie['id'] in poster_paths:
-                movie['poster_url'] = poster_paths[movie['id']]
 
     # 保存 movies.json
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -448,7 +477,7 @@ def main():
 
     # 同步 data.js
     data_js_path = os.path.join(SCRIPT_DIR, config["output"]["data_js"])
-    generate_data_js(movies, data_js_path, require_streaming=args.require_streaming)
+    generate_data_js(movies, data_js_path)
 
     print("\n完成！")
 
