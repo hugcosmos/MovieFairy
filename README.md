@@ -21,7 +21,7 @@
 - **情绪推荐** — 不是随便挑，是根据你的状态匹配的
 - **换一部** — 不满意？从同一批候选中换一部
 - **在线播放源** — 显示各平台观看方式（VIP / 免费 / 付费），点击直达
-- **本地海报** — 构建时下载，无需运行时加载远程图片
+- **本地海报** — 构建时通过 CDN 直链下载，无需运行时加载远程图片
 - **纯静态** — 无后端，零 API 调用，直接浏览器运行
 
 ## 项目结构
@@ -68,14 +68,17 @@ python fetch_movies.py --help
 # 4. 完整抓取（示例：Top 50 + 海报 + 播放源）
 python fetch_movies.py --top 50 --download-posters --fetch-streaming --cookie "你的豆瓣Cookie"
 
-# 5. 单独下载海报（基于已有 movies.json）
+# 5. 仅抓取列表 + 下载海报（无需 Cookie）
+python fetch_movies.py --top 50 --download-posters
+
+# 6. 单独下载海报（基于已有 movies.json，无需 Cookie）
 python fetch_movies.py --download-posters
 
-# 6. 单独更新播放源（基于已有 movies.json）
+# 7. 单独更新播放源（基于已有 movies.json，需要 Cookie）
 python fetch_movies.py --fetch-streaming --cookie "你的豆瓣Cookie"
 ```
 
-> `--fetch-streaming` 需要登录态的豆瓣 Cookie，否则会被反爬拦截。获取方式：浏览器登录豆瓣 → F12 → Network → 复制请求头中的 Cookie 字段。
+> `--fetch-streaming` 需要登录态的豆瓣 Cookie，否则会被反爬拦截。获取方式：浏览器登录豆瓣 → F12 → Network → 复制请求头中的 Cookie 字段。海报下载通过 CDN 直链获取，不需要 Cookie。
 
 ## 数据来源
 
