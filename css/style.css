@@ -359,6 +359,18 @@ body::after {
 .lucky-btn:hover svg { animation: none; }
 .lucky-btn:active { transform: translateY(0); }
 
+/* 按钮互斥高亮：hover 一个，另一个变淡 */
+.welcome-actions:has(.lucky-btn:hover) .start-btn {
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  box-shadow: none;
+}
+.welcome-actions:has(.start-btn:hover) .lucky-btn {
+  opacity: 0.5;
+  animation: none;
+}
+
 @keyframes shimmer {
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
