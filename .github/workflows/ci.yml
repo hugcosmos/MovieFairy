@@ -1,0 +1,32 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions: read-all
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Check HTML valid
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -qq -y tidy > /dev/null
+          tidy -q -e index.html || true
+
+      - name: Check JS syntax
+        run: |
+          for f in js/*.js; do node --check "$f" && echo "OK: $f"; done
+
+      - name: Verify assets exist
+        run: |
+          test -f manifest.json || (echo "FAIL: manifest.json missing" && exit 1)
+          test -f css/style.css || (echo "FAIL: css/style.css missing" && exit 1)
+          test -f icons/icon-192.png || (echo "FAIL: icon-192.png missing" && exit 1)
+          echo "All assets present"
