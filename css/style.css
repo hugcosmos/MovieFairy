@@ -262,6 +262,29 @@ body::after {
   margin-bottom: 24px;
 }
 
+/* === 安装按钮 === */
+.install-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px dashed var(--warm-border);
+  border-radius: 50px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font);
+}
+.install-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  border-style: solid;
+}
+
 .platform-label {
   font-size: 13px;
   color: var(--text-muted);
@@ -485,14 +508,14 @@ body::after {
 .progress-segment {
   flex: 1;
   height: 4px;
-  background: rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.06);
   border-radius: 2px;
   overflow: hidden;
 }
 
 .progress-segment-fill {
   height: 100%;
-  background: #fff;
+  background: var(--accent);
   border-radius: 2px;
   transition: width 0.4s ease;
 }
@@ -898,6 +921,15 @@ body::after {
   background: rgba(255,255,255,0.06);
 }
 
+[data-theme="dark"] .install-btn {
+  border-color: rgba(255,255,255,0.1);
+  color: var(--text-muted);
+}
+[data-theme="dark"] .install-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 [data-theme="dark"] .feature-text {
   color: #b8ada2;
 }
@@ -952,7 +984,7 @@ body::after {
 }
 
 [data-theme="dark"] .progress-segment {
-  background: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.1);
 }
 
 [data-theme="dark"] .welcome-actions:has(.lucky-btn:hover) .start-btn {

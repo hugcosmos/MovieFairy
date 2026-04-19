@@ -44,6 +44,26 @@
     themeBtn.className = "theme-toggle " + mode;
   }
 
+  /** PWA 安装提示 */
+  let deferredPrompt = null;
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    // 如果当前在欢迎页，立即显示安装按钮
+    const installBtn = document.getElementById("installBtn");
+    if (installBtn) installBtn.style.display = "inline-flex";
+  });
+
+  function installApp() {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(() => {
+      deferredPrompt = null;
+      const installBtn = document.getElementById("installBtn");
+      if (installBtn) installBtn.style.display = "none";
+    });
+  }
+
   /** 渲染欢迎页 */
   function renderWelcome() {
     currentStep = -1;
@@ -120,12 +140,20 @@
               开盲盒
             </button>
           </div>
+          <button class="install-btn" id="installBtn" style="display:none">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            添加到主屏幕
+          </button>
         </div>
       </div>
     `;
     document.getElementById("startBtn").addEventListener("click", startQuestions);
     document.getElementById("luckyBtn").addEventListener("click", feelingLucky);
     updateThemeBtn("on-hero");
+
+    const installBtn = document.getElementById("installBtn");
+    if (deferredPrompt) installBtn.style.display = "inline-flex";
+    installBtn.addEventListener("click", installApp);
 
     container.querySelectorAll(".platform-chip").forEach(chip => {
       chip.addEventListener("click", () => {
