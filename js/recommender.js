@@ -179,8 +179,8 @@ function recommend(movies, mood) {
  * @param {Object} currentMovie - 当前电影（避免重复）
  * @returns {Object} 推荐的电影
  */
-function pickFromCandidates(candidates, currentMovie) {
-  const available = candidates.filter(m => m.id !== currentMovie.id);
+function pickFromCandidates(candidates, currentMovie, seenIds) {
+  const available = candidates.filter(m => !seenIds.has(m.id));
   if (available.length === 0) return null;
   const idx = Math.floor(Math.random() * available.length);
   return available[idx];

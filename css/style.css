@@ -3,9 +3,10 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --bg-1: #fdf6f0;
-  --bg-2: #f5ebe0;
-  --card: #ffffff;
+  color-scheme: light only;
+  --bg-1: #f8ede4;
+  --bg-2: #f0dfd2;
+  --card: #faf2ec;
   --text: #3a3a3a;
   --text-secondary: #7a7a7a;
   --text-muted: #b0a89e;
@@ -19,6 +20,22 @@
   --shadow-deep: 0 8px 40px rgba(58, 40, 20, 0.10);
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC",
     "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+/* 暗色模式 */
+[data-theme="dark"] {
+  --bg-1: #1a1614;
+  --bg-2: #211c19;
+  --card: #1e1a17;
+  --text: #f0e8e0;
+  --text-secondary: #c4b8ab;
+  --text-muted: #9a8e80;
+  --accent: #e8a070;
+  --accent-hover: #f0b888;
+  --accent-light: #3d2e24;
+  --accent-glow: rgba(232, 160, 112, 0.15);
+  --warm-border: rgba(232, 160, 112, 0.18);
+  --shadow-deep: 0 8px 40px rgba(0, 0, 0, 0.4);
 }
 
 body {
@@ -52,22 +69,25 @@ body::after {
   pointer-events: none;
 }
 
-.container {
+.app-wrapper {
   max-width: 560px;
   width: 100%;
   position: relative;
   z-index: 1;
 }
 
-/* 所有页面卡片统一高度和宽度 */
+.container {
+  width: 100%;
+  position: relative;
+}
+
+/* 所有页面卡片统一宽度 */
 .welcome-card,
 .question-card,
 .result-card {
-  min-height: 720px;
-  height: 720px;
+  min-height: 580px;
   display: flex;
   flex-direction: column;
-  max-width: 560px;
   width: 100%;
   margin: 0 auto;
 }
@@ -219,6 +239,8 @@ body::after {
   background: var(--bg-1);
   border-radius: var(--radius-sm);
   text-align: center;
+  border: 1px solid var(--warm-border);
+  box-shadow: 0 1px 3px rgba(58, 40, 20, 0.04);
 }
 
 .feature-icon {
@@ -511,7 +533,7 @@ body::after {
 
 .option-btn {
   background: var(--bg-1);
-  border: 1.5px solid transparent;
+  border: 1.5px solid var(--warm-border);
   border-radius: var(--radius-sm);
   padding: 20px 20px;
   font-size: 15px;
@@ -809,16 +831,249 @@ body::after {
   50%      { transform: translateY(-6px); }
 }
 
+/* === 主题切换按钮 === */
+.theme-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+/* 在 welcome-hero 渐变上 - 白色半透明 */
+.theme-toggle.on-hero {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.15);
+}
+.theme-toggle.on-hero:hover {
+  background: rgba(255,255,255,0.35);
+  transform: scale(1.1);
+}
+
+/* 在普通卡片上 - 实心 */
+.theme-toggle.on-card {
+  background: var(--bg-1);
+  color: var(--accent);
+  border: 1.5px solid var(--warm-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.theme-toggle.on-card:hover {
+  border-color: var(--accent);
+  transform: scale(1.1);
+}
+
+/* 在海报图上 - 白色半透明 */
+.theme-toggle.on-poster {
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.15);
+}
+.theme-toggle.on-poster:hover {
+  background: rgba(0,0,0,0.5);
+  transform: scale(1.1);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.4s ease;
+}
+.theme-toggle:hover svg {
+  transform: rotate(20deg);
+}
+
+/* 暗色模式特殊覆盖 */
+[data-theme="dark"] .feature-item {
+  background: rgba(255,255,255,0.06);
+}
+
+[data-theme="dark"] .feature-text {
+  color: #b8ada2;
+}
+
+[data-theme="dark"] .platform-label {
+  color: #a89e94;
+}
+
+[data-theme="dark"] .platform-chip {
+  color: #c4b8ab;
+  border-color: rgba(255,255,255,0.1);
+}
+[data-theme="dark"] .platform-chip:hover {
+  border-color: var(--accent);
+  background: rgba(232,160,112,0.1);
+}
+[data-theme="dark"] .platform-chip.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+[data-theme="dark"] .option-btn {
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  color: #e0d6cc;
+}
+[data-theme="dark"] .option-btn:hover {
+  background: rgba(232,160,112,0.1);
+  border-color: var(--accent);
+  color: #f0e8e0;
+}
+
+[data-theme="dark"] .lucky-btn {
+  background: linear-gradient(135deg, #4a3828, #5a4232, #4a3828);
+  background-size: 200% 200%;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+[data-theme="dark"] .lucky-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+[data-theme="dark"] .poster-section {
+  background: #1e1a17;
+}
+
+[data-theme="dark"] .result-message {
+  background: rgba(232,160,112,0.08);
+  color: #e0d6cc;
+}
+
+[data-theme="dark"] .progress-segment {
+  background: rgba(255,255,255,0.12);
+}
+
+[data-theme="dark"] .welcome-actions:has(.lucky-btn:hover) .start-btn {
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  box-shadow: none;
+}
+
+[data-theme="dark"] .streaming-link {
+  background: rgba(255,255,255,0.06);
+  color: #d0c4b8;
+}
+[data-theme="dark"] .streaming-platform {
+  color: #e0d6cc;
+}
+[data-theme="dark"] .streaming-type {
+  background: rgba(255,255,255,0.08);
+  color: #a89e94;
+}
+
+[data-theme="dark"] .douban-link {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+[data-theme="dark"] .restart-btn {
+  border-color: rgba(255,255,255,0.15);
+  color: #b0a89e;
+}
+[data-theme="dark"] .restart-btn:hover {
+  border-color: #c4b8ab;
+  color: #c4b8ab;
+}
+
+[data-theme="dark"] .question-footer {
+  color: #9a8e80;
+}
+
+[data-theme="dark"] .back-platform-link {
+  color: #9a8e80;
+}
+[data-theme="dark"] .back-platform-link:hover {
+  color: var(--accent);
+}
+
+[data-theme="dark"] .welcome-desc {
+  color: #ddd2c6;
+}
+[data-theme="dark"] .desc-accent {
+  color: var(--accent);
+}
+
+[data-theme="dark"] .result-meta {
+  color: #a89e94;
+}
+
+[data-theme="dark"] .result-synopsis {
+  color: #b8ada2;
+  border-top-color: rgba(255,255,255,0.08);
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+
+[data-theme="dark"] .copyright-notice {
+  color: #7a6e62;
+}
+
+[data-theme="dark"] .streaming-empty {
+  color: #9a8e80;
+}
+
+[data-theme="dark"] body::before {
+  background: radial-gradient(circle, rgba(232,160,112,0.06) 0%, transparent 70%);
+}
+[data-theme="dark"] body::after {
+  background: radial-gradient(circle, rgba(180,140,110,0.04) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .question-card::before {
+  background: radial-gradient(circle, rgba(232,160,112,0.06) 0%, transparent 70%);
+}
+[data-theme="dark"] .question-card::after {
+  background: radial-gradient(circle, rgba(180,140,110,0.04) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .theme-toggle.on-card {
+  background: var(--card);
+  color: var(--accent);
+  border-color: rgba(255,255,255,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+[data-theme="dark"] .theme-toggle.on-card:hover {
+  border-color: var(--accent);
+}
+
+[data-theme="dark"] .theme-toggle.on-poster {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
 /* === 响应式 === */
 @media (max-width: 520px) {
-  body { padding: 12px; }
-  .welcome-hero { padding: 44px 24px 40px; }
+  body { padding: 12px; padding-top: 52px; }
+  .theme-toggle { top: 6px; right: 4px; width: 36px; height: 36px; }
+  .theme-toggle svg { width: 18px; height: 18px; }
+  .welcome-hero { padding: 44px 24px 40px; height: auto; min-height: 220px; }
   .welcome-content { padding: 28px 24px 32px; }
   .welcome-features { gap: 10px; }
   .question-header { padding: 24px 20px 20px; }
   .question-body { padding: 24px 20px 28px; }
   .result-body { padding: 20px 20px 24px; }
-  .poster-section { max-height: 300px; }
+  .poster-section { height: 220px; max-height: 220px; }
   .platform-chips { flex-wrap: wrap; }
   .platform-chip { padding: 5px 10px; font-size: 11px; }
+  .result-synopsis { -webkit-line-clamp: 2; }
+}
+
+@media (min-height: 800px) {
+  .welcome-card,
+  .question-card,
+  .result-card {
+    min-height: 720px;
+  }
 }

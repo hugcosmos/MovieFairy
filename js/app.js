@@ -8,11 +8,41 @@
   let currentStep = -1;
   let answers = [];
   let candidates = [];
+  let seenIds = new Set();
   let currentMovie = null;
   let selectedPlatforms = [];
   let isLuckyMode = false;
 
   const container = document.getElementById("app");
+  const themeBtn = document.getElementById("themeToggle");
+
+  /** 主题切换 */
+  function getPreferredTheme() {
+    const stored = localStorage.getItem("mf-theme");
+    if (stored) return stored;
+    return "light";
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    const sunIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>';
+    const moonIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    themeBtn.innerHTML = theme === "dark" ? sunIcon : moonIcon;
+  }
+
+  function toggleTheme() {
+    const current = document.documentElement.getAttribute("data-theme") || "light";
+    const next = current === "dark" ? "light" : "dark";
+    localStorage.setItem("mf-theme", next);
+    applyTheme(next);
+  }
+
+  applyTheme(getPreferredTheme());
+  themeBtn.addEventListener("click", toggleTheme);
+
+  function updateThemeBtn(mode) {
+    themeBtn.className = "theme-toggle " + mode;
+  }
 
   /** 渲染欢迎页 */
   function renderWelcome() {
@@ -95,6 +125,7 @@
     `;
     document.getElementById("startBtn").addEventListener("click", startQuestions);
     document.getElementById("luckyBtn").addEventListener("click", feelingLucky);
+    updateThemeBtn("on-hero");
 
     container.querySelectorAll(".platform-chip").forEach(chip => {
       chip.addEventListener("click", () => {
@@ -117,14 +148,11 @@
       : movies.slice();
     if (pool.length === 0) pool = movies.slice();
 
-    // 打乱后取 top 8 作为候选池
-    for (let i = pool.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [pool[i], pool[j]] = [pool[j], pool[i]];
-    }
-    const picked = pool.slice(0, 8);
-    currentMovie = picked[0];
-    candidates = picked.slice(1);
+    // 随机选一部
+    currentMovie = pool[Math.floor(Math.random() * pool.length)];
+    // 候选池 = 全部（排除当前），不锁数量
+    candidates = pool.filter(m => m.id !== currentMovie.id);
+    seenIds = new Set([currentMovie.id]);
     answers = [];
     isLuckyMode = true;
     renderResult(true, true);
@@ -218,6 +246,7 @@
         renderWelcome();
       });
     }
+    updateThemeBtn("on-card");
   }
 
   /** 渲染推荐结果 */
@@ -231,6 +260,7 @@
       const result = recommend(filtered, mood);
       currentMovie = result.movie;
       candidates = result.candidates;
+      seenIds = new Set([currentMovie.id]);
     }
 
     const movie = currentMovie;
@@ -302,9 +332,10 @@
     `;
 
     document.getElementById("changeBtn").addEventListener("click", () => {
-      const newMovie = pickFromCandidates(candidates, currentMovie);
+      const newMovie = pickFromCandidates(candidates, currentMovie, seenIds);
       if (newMovie) {
         currentMovie = newMovie;
+        seenIds.add(newMovie.id);
         renderResult(true, isLuckyMode);
       }
     });
@@ -313,6 +344,7 @@
       isLuckyMode = false;
       startQuestions();
     });
+    updateThemeBtn("on-poster");
   }
 
   init();

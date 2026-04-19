@@ -19,6 +19,7 @@ const DIMENSIONS = {
 // 问题库
 // 每个问题对应一个探测维度，选项带有维度标签
 const QUESTIONS = [
+  // ---- energy 维度 (6道) ----
   {
     id: 'energy_1',
     dimension: 'energy',
@@ -40,23 +41,55 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 'energy_3',
+    id: 'energy_4',
     dimension: 'energy',
-    text: '此刻你的手机电量大概多少？选一个最接近的直觉。',
+    text: '此刻你更想做的运动是？',
     options: [
-      { label: '红灯了，快没电了', value: 'low' },
-      { label: '还有一半吧', value: 'medium' },
-      { label: '满格或者刚充好', value: 'high' },
+      { label: '不想动，躺着就好', value: 'low' },
+      { label: '出去走走，散散步', value: 'medium' },
+      { label: '跑步、打球，出点汗', value: 'high' },
     ],
   },
+  {
+    id: 'energy_5',
+    dimension: 'energy',
+    text: '如果现在要你去完成一件小事，比如下楼取快递——',
+    options: [
+      { label: '算了，等会儿再说', value: 'low' },
+      { label: '可以，现在就去', value: 'medium' },
+      { label: '顺便还能去逛一圈', value: 'high' },
+    ],
+  },
+  {
+    id: 'energy_6',
+    dimension: 'energy',
+    text: '你今天说话的频率大概是？',
+    options: [
+      { label: '基本没跟人说话', value: 'low' },
+      { label: '正常，该说说', value: 'medium' },
+      { label: '今天话特别多', value: 'high' },
+    ],
+  },
+  {
+    id: 'energy_7',
+    dimension: 'energy',
+    text: '此刻你刷手机的速度是？',
+    options: [
+      { label: '刷两下就放下了，提不起劲', value: 'low' },
+      { label: '正常刷，没什么特别的', value: 'medium' },
+      { label: '刷得飞快，总想找点新鲜的', value: 'high' },
+    ],
+  },
+
+  // ---- social 维度 (6道) ----
   {
     id: 'social_1',
     dimension: 'social',
     text: '上一次你发自内心地笑，是因为什么？',
     options: [
-      { label: '有人跟我说了句话，或者一个表情包', value: 'connect' },
-      { label: '刷到什么东西，自己一个人笑的', value: 'alone' },
-      { label: '想不起来了……好像很久没笑过', value: 'neutral' },
+      { label: '和朋友聊天，或者有人逗我', value: 'connect' },
+      { label: '刷到好笑的东西，一个人笑的', value: 'alone' },
+      { label: '想不起来了', value: 'neutral' },
     ],
   },
   {
@@ -80,6 +113,38 @@ const QUESTIONS = [
     ],
   },
   {
+    id: 'social_4',
+    dimension: 'social',
+    text: '周末到了，你更想怎么过？',
+    options: [
+      { label: '约朋友出去吃个饭逛逛', value: 'connect' },
+      { label: '自己待着，追追剧打打游戏', value: 'alone' },
+      { label: '都行，看心情', value: 'neutral' },
+    ],
+  },
+  {
+    id: 'social_5',
+    dimension: 'social',
+    text: '你更喜欢哪种聊天方式？',
+    options: [
+      { label: '语音或者面对面聊', value: 'connect' },
+      { label: '打字，发完就想撤', value: 'alone' },
+      { label: '不太想聊天', value: 'neutral' },
+    ],
+  },
+  {
+    id: 'social_6',
+    dimension: 'social',
+    text: '如果你要去看电影，你会——',
+    options: [
+      { label: '想叫个人一起去看', value: 'connect' },
+      { label: '一个人去看更自在', value: 'alone' },
+      { label: '无所谓，电影好看就行', value: 'neutral' },
+    ],
+  },
+
+  // ---- tone 维度 (6道) ----
+  {
     id: 'tone_1',
     dimension: 'tone',
     text: '如果今天是一首歌，你觉得它更像什么旋律？',
@@ -92,21 +157,51 @@ const QUESTIONS = [
   {
     id: 'tone_2',
     dimension: 'tone',
-    text: '现在给你一碗热汤，你希望是什么汤？',
+    text: '选一个最接近你现在心情的词',
     options: [
-      { label: '番茄蛋花汤，暖暖的就好', value: 'positive' },
-      { label: '清汤，什么都不用加', value: 'neutral' },
-      { label: '姜汤，从里到外暖一下', value: 'healing' },
+      { label: '轻松', value: 'positive' },
+      { label: '平静', value: 'neutral' },
+      { label: '有点累', value: 'healing' },
     ],
   },
   {
     id: 'tone_3',
     dimension: 'tone',
-    text: '窗外现在是什么天气？（不一定要真实天气，凭感觉选）',
+    text: '如果今天有一个形容词，你选哪个？',
     options: [
-      { label: '晴天，有阳光', value: 'positive' },
-      { label: '多云，不晴不雨', value: 'neutral' },
-      { label: '下雨了，或者天已经黑了', value: 'healing' },
+      { label: '不错的一天', value: 'positive' },
+      { label: '普普通通的一天', value: 'neutral' },
+      { label: '不太想评价', value: 'healing' },
+    ],
+  },
+  {
+    id: 'tone_4',
+    dimension: 'tone',
+    text: '此刻你希望这部电影的结局是？',
+    options: [
+      { label: '开心的，越热闹越好', value: 'positive' },
+      { label: '无所谓，好看就行', value: 'neutral' },
+      { label: '安静的，能让我缓缓', value: 'healing' },
+    ],
+  },
+  {
+    id: 'tone_5',
+    dimension: 'tone',
+    text: '你今天到目前为止，叹气了吗？',
+    options: [
+      { label: '没有，今天还行', value: 'positive' },
+      { label: '可能叹了，没注意', value: 'neutral' },
+      { label: '叹了，还不止一次', value: 'healing' },
+    ],
+  },
+  {
+    id: 'tone_6',
+    dimension: 'tone',
+    text: '现在给你一个遥控器能换心情频道，你换到哪个？',
+    options: [
+      { label: '综艺频道，热闹的那种', value: 'positive' },
+      { label: '纪录片，慢慢看', value: 'neutral' },
+      { label: '一个安静的深夜电台', value: 'healing' },
     ],
   },
 ];
