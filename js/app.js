@@ -45,22 +45,56 @@
   }
 
   /** PWA 安装提示 */
-  let deferredPrompt = null;
-  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream;
-  const isStandalone = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone;
+  var deferredPrompt = null;
+  var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream;
+  var isMacSafari = /macintosh/i.test(navigator.userAgent) && /safari/i.test(navigator.userAgent) && !/chrome/i.test(navigator.userAgent);
+  var isMobileSafari = isIOS && /safari/i.test(navigator.userAgent) && !/crios|fxios|qq/i.test(navigator.userAgent);
+  var isStandalone = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone;
 
-  window.addEventListener("beforeinstallprompt", (e) => {
+  window.addEventListener("beforeinstallprompt", function (e) {
     e.preventDefault();
     deferredPrompt = e;
+    var btn = document.getElementById("installBtn");
+    if (btn) btn.style.display = "";
   });
 
   function installApp() {
     if (deferredPrompt) {
       deferredPrompt.prompt();
-      deferredPrompt.userChoice.then(() => { deferredPrompt = null; });
-    } else if (isIOS) {
-      alert("添加到主屏幕：\n\n点击底部「分享」按钮 → 选择「添加到主屏幕」");
+      deferredPrompt.userChoice.then(function () { deferredPrompt = null; });
+    } else {
+      showInstallGuide();
     }
+  }
+
+  function showInstallGuide() {
+    var overlay = document.createElement("div");
+    overlay.id = "install-guide";
+    var steps;
+    if (isMobileSafari) {
+      steps = '<div class="guide-steps">' +
+        '<p>1. 点击底部的 <b>分享按钮</b> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> (方框+向上箭头)</p>' +
+        '<p>2. 向下滑动，点击 <b>「添加到主屏幕」</b></p>' +
+        '<p>3. 点击右上角 <b>「添加」</b></p></div>';
+    } else if (isMacSafari) {
+      steps = '<div class="guide-steps">' +
+        '<p>1. 点击菜单栏 <b>文件</b> → <b>「添加到 Dock」</b></p>' +
+        '<p>2. 或点击地址栏左侧 <b>分享按钮</b> → <b>「添加到 Dock」</b></p></div>';
+    } else if (isIOS) {
+      steps = '<div class="guide-steps">' +
+        '<p>当前浏览器不支持直接安装</p>' +
+        '<p>请用 <b>Safari</b> 打开本页面：</p>' +
+        '<p>1. 复制当前网址</p>' +
+        '<p>2. 打开 Safari，粘贴访问</p>' +
+        '<p>3. 点击底部 <b>分享按钮</b> → <b>「添加到主屏幕」</b></p></div>';
+    } else {
+      steps = '<div class="guide-steps">' +
+        '<p>1. 点击浏览器 <b>菜单</b> (右上角 ⋮ 或 ⋯ )</p>' +
+        '<p>2. 找到 <b>「添加到主屏幕」</b> 或 <b>「安装应用」</b></p>' +
+        '<p>3. 点击确认</p></div>';
+    }
+    overlay.innerHTML = '<div class="guide-card"><div class="guide-title">添加到主屏幕</div>' + steps + '<button class="guide-close" onclick="this.parentElement.parentElement.remove()">知道了</button></div>';
+    document.body.appendChild(overlay);
   }
 
   function shouldShowInstall() {

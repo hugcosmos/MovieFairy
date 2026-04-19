@@ -1,4 +1,4 @@
-const CACHE_NAME = "moviefairy-v5";
+const CACHE_NAME = "moviefairy-v7";
 const ASSETS = [
   "/",
   "/index.html",
