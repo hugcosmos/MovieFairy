@@ -2,6 +2,8 @@
 
 一个善意且温柔的电影推荐工具。答 3 个小题或开个盲盒，为你挑一部好电影。
 
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/hugcosmos/MovieFairy/badge)](https://scorecard.dev/viewer/?uri=github.com/hugcosmos/MovieFairy)
+
 ## 在线体验
 
 > 部署在 Cloudflare Pages 上，海报数据在构建时自动获取。
