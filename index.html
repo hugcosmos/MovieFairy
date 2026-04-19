@@ -32,8 +32,11 @@
             if (newSW.state === "activated" && navigator.serviceWorker.controller) {
               var tip = document.createElement("div");
               tip.id = "update-tip";
-              tip.innerHTML = '<span>发现新版本</span><button onclick="location.reload()">刷新</button>';
+              tip.innerHTML = '<span>发现新版本</span><button id="reloadBtn">刷新</button>';
               document.body.appendChild(tip);
+              document.getElementById("reloadBtn").addEventListener("click", function () {
+                location.reload();
+              });
             }
           });
         });
