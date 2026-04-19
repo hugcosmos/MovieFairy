@@ -93,11 +93,15 @@
         '<p>2. 找到 <b>「添加到主屏幕」</b> 或 <b>「安装应用」</b></p>' +
         '<p>3. 点击确认</p></div>';
     }
-    overlay.innerHTML = '<div class="guide-card"><div class="guide-title">添加到主屏幕</div>' + steps + '<button class="guide-close">知道了</button></div>';
+    overlay.innerHTML = '<div class="guide-card"><div class="guide-title">添加到主屏幕</div>' + steps + '<button type="button" class="guide-close">知道了</button></div>';
     document.body.appendChild(overlay);
-    overlay.querySelector(".guide-close").addEventListener("click", function () {
-      overlay.remove();
-    });
+    function closeGuide(e) {
+      if (!e || e.target === overlay || e.target.classList.contains("guide-close")) {
+        overlay.remove();
+      }
+    }
+    overlay.querySelector(".guide-close").addEventListener("click", closeGuide);
+    overlay.addEventListener("click", closeGuide);
   }
 
   function shouldShowInstall() {
