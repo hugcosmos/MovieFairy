@@ -100,7 +100,12 @@
         overlay.remove();
       }
     }
-    overlay.querySelector(".guide-close").addEventListener("click", closeGuide);
+    var closeBtn = overlay.querySelector(".guide-close");
+    closeBtn.addEventListener("click", closeGuide);
+    closeBtn.addEventListener("touchend", function (e) {
+      e.preventDefault();
+      overlay.remove();
+    });
     overlay.addEventListener("click", closeGuide);
   }
 
