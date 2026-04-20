@@ -58,6 +58,12 @@
     if (btn) btn.style.display = "";
   });
 
+  window.addEventListener("appinstalled", function () {
+    deferredPrompt = null;
+    var btn = document.getElementById("installBtn");
+    if (btn) btn.style.display = "none";
+  });
+
   function installApp() {
     if (deferredPrompt) {
       deferredPrompt.prompt();
@@ -353,7 +359,7 @@
         <div class="poster-section">
           ${
             movie.poster_url
-              ? `<img src="${movie.poster_url}" alt="${movie.title}" onerror="this.parentElement.innerHTML='<div class=poster-placeholder>${movie.title[0]}</div>'">`
+              ? `<img id="posterImg" src="${movie.poster_url}" alt="${movie.title}">`
               : `<div class="poster-placeholder">${movie.title[0]}</div>`
           }
           <div class="poster-overlay"></div>
@@ -428,6 +434,14 @@
       isLuckyMode = false;
       startQuestions();
     });
+
+    var posterImg = document.getElementById("posterImg");
+    if (posterImg) {
+      posterImg.addEventListener("error", function () {
+        this.parentElement.innerHTML = '<div class="poster-placeholder">' + currentMovie.title[0] + '</div>';
+      });
+    }
+
     updateThemeBtn("on-poster");
   }
 
