@@ -19,6 +19,9 @@ on:
   schedule:
     - cron: '45 4 * * 3'
 
+# Restrict the GITHUB_TOKEN at the top level; jobs grant their own write scopes.
+permissions: read-all
+
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
