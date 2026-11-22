@@ -1,8 +1,13 @@
 # Movie Fairy
 
-一个善意且温柔的电影推荐工具。答 3 个小题或开个盲盒，为你挑一部好电影。
+一个友好且温柔的电影推荐工具。答 3 个小题或开个盲盒，为你挑一部好电影。
 
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/hugcosmos/MovieFairy/badge)](https://scorecard.dev/viewer/?uri=github.com/hugcosmos/MovieFairy)
+
+> **No longer maintained — source closed. This repo is the final open-source version.**
+Please play the latest game through:
+- [Movie Fairy](https://moviefairy.pages.dev/)
+- Xiaohongshu mini-tool: "MovieFairy"
 
 ## 在线体验
 
